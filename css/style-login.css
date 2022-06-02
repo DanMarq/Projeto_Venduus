@@ -1,0 +1,66 @@
+.login {
+    min-height: 100vh;
+  }
+
+  .custom-display-r {
+    margin-right: 15px;
+  }
+
+  .custom-display-l {
+    margin-left: 15px;
+  }
+
+  @media (max-width: 768px){
+    .custom-display-r {
+      margin-right: 0;
+    }
+
+    .custom-display-l {
+      margin-left: 0;
+    }
+  }
+  
+  .bg-image {
+    background-image: url('../Images/login/venduus_bg_login.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 700;
+  }
+  
+ .connect-and-forget {
+  position: relative;
+  display: flex;
+  padding-left: 1.25rem;
+}
+
+.btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.6rem 2rem;
+    background-color: #513693;
+    color: white;
+    border-radius: 50px;
+}
+  
+.btn-login:hover {
+  opacity: 0.9;
+  color: white;
+  
+}
+
+.tittle-call {
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: #E7E11B !important;
+}
+
+.text-login {
+  color: white;
+}

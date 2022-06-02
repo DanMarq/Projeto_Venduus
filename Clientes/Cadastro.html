@@ -1,0 +1,820 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alteração de Clientes | Venduus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#513693">
+
+     <!-- Add local styles, mostly for plugins css file -->
+     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css" />
+     <link rel="stylesheet" href="../css/animate.css" />
+     <link rel="stylesheet" href="../css/style.css" />
+
+     <!--Plugins do Form-->
+     <link rel="stylesheet" href="../css/plugins/steps/jquery.steps.css" />
+     <link rel="stylesheet" href="../css/plugins/iCheck/custom.css" />
+
+    <!-- Favicon | Icon Site -->
+    <link rel="icon" href="../Images/icon/favicon_venduus-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../Images/icon/favicon_venduus-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../Images/icon/favicon_venduus-32x32.png" />
+
+</head>
+<body>
+
+
+<!-- Wrapper-->
+<div id="wrapper" class="Catalogo_Grid">
+
+   <!-- Navigation -->    
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a href="../index.html">
+                        <img alt="image" width="130" height="70" src="../Images/venduus-vertical-branco-so-fonte.png" />
+                    </a>
+                    
+                </div>
+                <div class="logo-element">
+                  <img alt="image" width="45" height="25" src="../Images/venduus-vertical-branco-so-fonte.png" />
+              </div>
+            </li>
+
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label" data-i18n="nav.graphs">Dashboard</span><span class="fa arrow"></span></a>
+
+                    <ul class="nav nav-second-level">
+                        <li class=""><a href="../index.html">Principal</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-users"></i><span class="nav-label" data-i18n="nav.graphs">Clientes</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in">
+                      <li class=""><a href="Clientes/Clientes.html">Lista de Clientes</a></li>
+                        <li class="active"><a href="Clientes/Cadastro.html">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-money"></i><span class="nav-label" data-i18n="nav.graphs">Cobrança</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Cobranca/Cobranca.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-file-text"></i><span class="nav-label" data-i18n="nav.graphs">Notas Fiscais</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../NotasFiscais/NotasFiscais.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-pencil-square-o"></i><span class="nav-label" data-i18n="nav.graphs">Orçamentos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Orcamento/Orcamentos.html">Entrada</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-list-alt"></i><span class="nav-label" data-i18n="nav.graphs">Pedidos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Pedidos/Pedidos.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-tags"></i><span class="nav-label" data-i18n="nav.graphs">Produtos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class=""><a href="../Produtos/Catalogo_Grid.html">Catálogo Virtual</a></li>
+                        <li class=""><a href="../Produtos/Catalogo_Galeria.html">Catálogo Galeria</a></li>
+
+                    </ul>
+                
+                <li class="">
+                    <a href="#"><i class="fa fa-briefcase"></i><span class="nav-label" data-i18n="nav.graphs">Representante</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Representantes/Representantes.html">Consulta</a></li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+</nav>
+<!-- Fim do Navigation -->   
+
+
+<!-- Page wraper -->
+<div id="page-wrapper" class="gray-bg">
+           
+    <!-- Bloco de Acesso do Usuario -->           
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <!-- Frase de Apresentação do Usuario -->
+            <li>
+                <span class="welcome">Olá! Esse é seu painel, <a href="" class="user-name">Laura</a></span>
+            </li>
+            <!-- Dropdown de Orçamento -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                    <i class="fa fa-shopping-cart"></i><span id="qdtCarrinho" class="label label-warning">0</span>
+                </a>
+                <!-- Dropdown Vazio -->
+                <ul class="dropdown-menu dropdown-messages orcamento-drop">
+                    <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <h4 class="font-bold"> Nenhum Orçamento iniciado!</h4>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+
+                <!-- Esse é um Dropdown com um orçamento dentro do carrinho -->
+                <!-- Para visualuzar, retire esse parte de dentro do comentário -->
+                
+                <!--
+                <ul class="dropdown-menu dropdown-messages orcamento-drop show">
+                  <li>
+                          <div class="dropdown-messages-box">
+                              <div class="media-body">
+                                <h4 class="font-bold"> ALUA PRESENTES E ADORNOS LTDA</h4>
+                                <div class="dropdown-divider"></div>
+                              </div>
+                          </div>
+                          <div class="dropdown-messages-box d-flex">
+                              <a rel="nofollow" href="/Orcamentos/Carrinho/21949" class="btn btn-sm btn-primary pt-1">
+                                  <i class="fa fa-check-circle-o"></i> Checkout
+                              </a>
+                              <div class="card-options mr-0">
+                              <h3 class="total_valor_drop_check">
+                              Total: <span id="totalCarrinho2">R$ 106,31</span>
+                            </h3>
+                          </div>
+                          </div>
+                  </li>
+              </ul>-->
+
+            </li>
+            <!-- User Profile -->
+            <li>
+                <div class="dropdown main-profile-menu">
+                    <a data-toggle="dropdown" class="" href="">
+                        <span class="main-img-user">
+                            <!--Foto do usuario -->
+                            <img alt="avatar" src="../Images/user/perfil_foto.jpg"></span>
+                        </a>
+                        <ul class="dropdown-menu user-drop animated fadeInRight m-t-xs">
+                          <div class="drop-heading">
+                            <div class="text-center">
+                                <!-- Nome do usuario-->
+                              <h5 class="dropdown-name">Laura Sobrenome</h5>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle-o"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o"></i> Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Suporte</a></li>
+                            <li><a class="dropdown-item" href="/Login/LogOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+                </div>
+
+
+            </li>
+             <!-- Fim User Profile -->
+        </ul>
+    </nav>        
+</div>
+<!-- Fim do Bloco de Acesso do Usuario -->
+    
+<!-- Main view  -->
+<div class="wrapper wrapper-content">
+<!--Titulo da Pagina-->
+<div class="page-header">
+    <h1 class="page-title mb-0">Alteração de Clientes</h1>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12 col-lg-12 col-xl-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <p>Atenção! Clientes novos enviar documentos por email!</p>
+
+                <!--Form-->
+                <form id="form" action="#" class="wizard-big">
+                    <!--Primeira Tab-->
+                    <h1>Dados Cadastrais</h1>
+                    <fieldset>
+                        <h2>Identificação</h2>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!--CNPJ e NOME-->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>CNPJ *</label>
+                                            <input id="cnpj" name="cnpj" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label>Nome *</label>
+                                            <input id="nome" name="nome" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div><!--row--->
+                                
+                               <!--Inscrição e Fantasia-->
+                               <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Inscrição Estadual *</label>
+                                        <input id="inscricaoEstadual" name="inscricaoEstadual" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Nome Fantasia *</label>
+                                        <input id="nomeFantasia" name="nomeFantasia" type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div><!--row--->
+                            
+                            <!--Suframa e Grupo/Rede-->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Suframa *</label>
+                                        <input id="suframa" disabled name="suframa" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Grupo/Rede *</label>
+                                        <input id="grupo-rede" disabled name="grupo-rede" type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div><!--row--->
+
+                             <!--Regime Tributário-->
+                             <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Regime Tributário *</label>
+                                        <input id="regimeTributario" disabled name="regimeTributario" type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                </div>
+                            </div><!--row--->
+                               
+                              
+                            </div><!--col-lg-12-->
+
+                        </div><!--row-->
+
+                        <div class="hr-line-dashed"></div>
+
+                        <h2>Contatos</h2>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!--Contato, DDD e Telefone-->
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Contato *</label>
+                                                    <input id="contato" name="contato" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <label>DDD *</label>
+                                                    <input id="ddd" name="ddd" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Telefone *</label>
+                                                    <input id="telefone" name="telefone" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div><!--row--->
+
+                                         <!--Email e Email NFE-->
+                                         <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>E-mail *</label>
+                                                    <input id="email" name="email" type="email" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>E-mail NFE *</label>
+                                                    <input id="emailNFE" name="emailNFE" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div><!--row--->
+
+                                        <!--Site-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Site</label>
+                                                    <input id="site" name="site" type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                           
+                                        </div><!--row--->
+
+                                </div><!--col-lg-12-->
+                            </div>
+
+
+                    </fieldset>
+                    
+                    <h1>Endereço Comercial</h1>
+                                <fieldset>
+                                    <h2>Comercial</h2>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!--CEP e ENDEREÇO-->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>CEP *</label>
+                                                        <div class="input-group">
+                                                            <input id="com_cep" name="com_cep" type="text" class="form-control" value="">
+                                                            <span class="input-group-append">
+                                                                <!--Botão busca cep-->
+                                                                <button type="button" class="btn btn-primary" id="btnbuscacepcom" name="btnbuscacepcom"><i class="fa fa-search mr-2"></i>Buscar</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Endereço *</label>
+                                                        <input id="com_logradouro" name="com_logradouro" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                            <!--Número Complemento-->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Número *</label>
+                                                            <input id="numero" name="com_numero" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Complemento</label>
+                                                        <input id="complemento" name="com_complemento" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+                                            
+                                            <!--Bairro, Cidade e Estado -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Bairro *</label>
+                                                            <input id="com_bairro" name="com_bairro" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Cidade *</label>
+                                                        <input id="com_cidade" name="com_cidade" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>Estado *</label>
+                                                        <input id="com_uf" name="com_estado" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                            <!--Municipio, País e Codigo do País -->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Cod. do Municipio *</label>
+                                                            <input id="com_codmunicipio" name="com_codMunicipio" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>País *</label>
+                                                        <input id="com_pais" name="com_pais" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Cod. do País *</label>
+                                                        <input id="com_codPais" name="com_codPais" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                        </div><!--col-lg-12-->
+
+                                    </div><!--row-->
+                                </fieldset>
+
+                    <h1>Endereço de Cobrança</h1>
+                                <fieldset>
+                                    <h2>Cobrança</h2>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!--CEP e ENDEREÇO-->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>CEP *</label>
+                                                        <div class="input-group">
+                                                            <input id="cob_cep" name="cob_cep" type="text" class="form-control" value="">
+                                                            <span class="input-group-append">
+                                                                <!--Botão busca cep-->
+                                                                <button type="button" class="btn btn-primary" id="btnbuscacepcob" name="btnbuscacepcob"><i class="fa fa-search mr-2"></i>Buscar</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Endereço *</label>
+                                                        <input id="cob_logradouro" name="cob_logradouro type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                            <!--Número Complemento-->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Número *</label>
+                                                            <input id="cob_numero" name="cob_numero" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Complemento</label>
+                                                        <input id="cob_complemento" name="cob_complemento" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+                                            
+                                            <!--Bairro, Cidade e Estado -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Bairro *</label>
+                                                            <input id="cob_bairro" name="cob_bairro" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Cidade *</label>
+                                                        <input id="cob_cidade" name="cob_cidade" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>Estado *</label>
+                                                        <input id="cob_uf" name="cob_estado" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                        </div><!--col-lg-12-->
+
+                                    </div><!--row-->
+                                </fieldset>
+
+                                <h1>Endereço de Entrega</h1>
+                                <fieldset>
+                                    <h2>Entrega</h2>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!--CEP e ENDEREÇO-->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>CEP *</label>
+                                                        <div class="input-group">
+                                                            <input id="ent_cep" name="ent_cep" type="text" class="form-control" value="">
+                                                            <span class="input-group-append">
+                                                                <!--Botão busca cep-->
+                                                                <button type="button" class="btn btn-primary" id="btnbuscacepent" name="btnbuscacepent"><i class="fa fa-search mr-2"></i>Buscar</button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Endereço *</label>
+                                                        <input id="ent_logradouro" name="ent_logradouro" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                            <!--Número Complemento-->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Número *</label>
+                                                            <input id="ent_numero" name="ent_numero" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Complemento</label>
+                                                        <input id="ent_complemento" name="ent_complemento" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+                                            
+                                            <!--Bairro, Cidade e Estado -->
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Bairro *</label>
+                                                            <input id="ent_bairro" name="ent_bairro" type="number" class="form-control">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Cidade *</label>
+                                                        <input id="ent_cidade" name="ent_cidade" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>Estado *</label>
+                                                        <input id="ent_uf" name="ent_estado" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                        </div><!--col-lg-12-->
+
+                                    </div><!--row-->
+                                </fieldset>
+
+                                <h1>Dados Comerciais</h1>
+                                <fieldset>
+                                    <h2>Dados Comerciais</h2>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <!--Representante e comissão-->
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Representante *</label>
+                                                            <input id="representantesel" name="representantesel" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Comissão *</label>
+                                                        <input id="comissao" name="comissao" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                            <!--Representante e comissão-->
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <div class="form-group">
+                                                        <label>Transportadora *</label>
+                                                            <input id="transportadorasel" name="transportadorasel" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Frete *</label>
+                                                        <input id="frete_transportadora" name="frete_transportadora" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                            <!--Limite de Credito, Credito Financeiro, Consumidor Final, Calcular ST e VIP-->
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>Limite de Credito *</label>
+                                                            <input id="limite" name="limite" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>Credito Financeiro *</label>
+                                                        <input id="credito" name="credito" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>Consumidor Final *</label>
+                                                        <input id="cons_final" name="cons_final" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group">
+                                                        <label>Calcular ST *</label>
+                                                        <input id="calcst" name="calcst" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Vip *</label>
+                                                        <input id="vip" name="vip" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div><!--row--->
+
+                                            <!--Representante e comissão-->
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label>Transportadora *</label>
+                                                            <textarea class="form-control" name="transportadora"></textarea>
+                                                    </div>
+                                                </div>
+                                
+                                                
+                                            </div><!--row--->
+
+                                        </div><!--col-lg-12-->
+                                    </div><!--row'-->
+                                </fieldset>
+                                
+                    
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div><!-- End wrapper wrapper-content -->
+
+
+
+
+
+<!-- Footer -->
+            <div class="footer">
+    <div class="float-right">
+       Sistema de Vendas
+    </div>
+    <div>
+        <strong>Copyright</strong> CCPSytem &copy; 2000 - 2020
+    </div>
+</div>
+
+
+</div><!-- End page wrapper-->
+
+</div><!-- End wrapper-->
+
+<!-- Main Scripts -->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/Popper/popper.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../lib/metisMenu/dist/jquery.metisMenu.js"></script>
+<script src="../lib/pace/pace.min.js"></script>
+<script src="../lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/site.js"></script>  
+
+
+<!-- Others Scripts -->
+<script src="../lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="../https://cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script src="../js/ej.culture.pt-BR.min.js"></script>
+
+<!--Plugins Steps e Validate-->
+<script src="../js/plugins/steps/jquery.steps.min.js"></script>
+<script src="../js/plugins/validate/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#wizard").steps();
+        $("#form").steps({
+            bodyTag: "fieldset",
+            onStepChanging: function (event, currentIndex, newIndex)
+            {
+                // Always allow going backward even if the current step contains invalid fields!
+                if (currentIndex > newIndex)
+                {
+                    return true;
+                }
+
+                // Forbid suppressing "Warning" step if the user is to young
+                if (newIndex === 3 && Number($("#age").val()) < 18)
+                {
+                    return false;
+                }
+
+                var form = $(this);
+
+                // Clean up if user went backward before
+                if (currentIndex < newIndex)
+                {
+                    // To remove error styles
+                    $(".body:eq(" + newIndex + ") label.error", form).remove();
+                    $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                }
+
+                // Disable validation on fields that are disabled or hidden.
+                form.validate().settings.ignore = ":disabled,:hidden";
+
+                // Start validation; Prevent going forward if false
+                return form.valid();
+            },
+            onStepChanged: function (event, currentIndex, priorIndex)
+            {
+                // Suppress (skip) "Warning" step if the user is old enough.
+                if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                {
+                    $(this).steps("next");
+                }
+
+                // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                if (currentIndex === 2 && priorIndex === 3)
+                {
+                    $(this).steps("previous");
+                }
+            },
+            onFinishing: function (event, currentIndex)
+            {
+                var form = $(this);
+
+                // Disable validation on fields that are disabled.
+                // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                form.validate().settings.ignore = ":disabled";
+
+                // Start validation; Prevent form submission if false
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex)
+            {
+                var form = $(this);
+
+                // Submit form input
+                form.submit();
+            }
+        }).validate({
+                    errorPlacement: function (error, element)
+                    {
+                        element.before(error);
+                    },
+                    rules: {
+                        confirm: {
+                            equalTo: "#password"
+                        }
+                    }
+                });
+   });
+</script>
+
+<!-- Custon JS Mask - Root -->
+<script src="js/mask.js"></script>
+
+</body>
+</html>

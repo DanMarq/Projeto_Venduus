@@ -1,0 +1,1050 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Cliente | Venduus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#513693">
+
+     <!-- Add local styles, mostly for plugins css file -->
+     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css" />
+     <link rel="stylesheet" href="../css/animate.css" />
+     <link rel="stylesheet" href="../css/style.css" /> 
+
+      <!--Plugin input data-->
+    <link rel="stylesheet" href="../css/plugins/datapicker/datepicker3.css">
+     
+    <!-- Favicon | Icon Site -->
+    <link rel="icon" href="../Images/icon/favicon_venduus-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../Images/icon/favicon_venduus-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../Images/icon/favicon_venduus-32x32.png" />
+
+</head>
+<body>
+
+
+<!-- Wrapper-->
+<div id="wrapper" class="Catalogo_Grid">
+
+<!-- Navigation -->    
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a href="../index.html">
+                        <img alt="image" width="130" height="70" src="../Images/venduus-vertical-branco-so-fonte.png" />
+                    </a>
+                    
+                </div>
+                <div class="logo-element">
+                  <img alt="image" width="45" height="25" src="../Images/venduus-vertical-branco-so-fonte.png" />
+              </div>
+            </li>
+
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label" data-i18n="nav.graphs">Dashboard</span><span class="fa arrow"></span></a>
+
+                    <ul class="nav nav-second-level">
+                        <li class=""><a href="../index.html">Principal</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-users"></i><span class="nav-label" data-i18n="nav.graphs">Clientes</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in">
+                      <li class="active"><a href="../Clientes/Clientes.html">Lista de Clientes</a></li>
+                        <li class=""><a href="../Clientes/Cadastro.html">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-money"></i><span class="nav-label" data-i18n="nav.graphs">Cobrança</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Cobranca/Cobranca.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-file-text"></i><span class="nav-label" data-i18n="nav.graphs">Notas Fiscais</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../NotasFiscais/NotasFiscais.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-pencil-square-o"></i><span class="nav-label" data-i18n="nav.graphs">Orçamentos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Orcamento/Orcamentos.html">Entrada</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-list-alt"></i><span class="nav-label" data-i18n="nav.graphs">Pedidos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Pedidos/Pedidos.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-tags"></i><span class="nav-label" data-i18n="nav.graphs">Produtos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class=""><a href="../Produtos/Catalogo_Grid.html">Catálogo Virtual</a></li>
+                        <li class=""><a href="../Produtos/Catalogo_Galeria.html">Catálogo Galeria</a></li>
+
+                    </ul>
+                
+                <li class="">
+                    <a href="#"><i class="fa fa-briefcase"></i><span class="nav-label" data-i18n="nav.graphs">Representante</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Representantes/Representantes.html">Consulta</a></li>
+                    </ul>
+                </li>
+
+        </ul>
+    </div>
+</nav>
+<!-- Fim do Navigation --> 
+
+
+<!-- Page wraper -->
+<div id="page-wrapper" class="gray-bg">
+           
+    <!-- Bloco de Acesso do Usuario -->           
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <!-- Frase de Apresentação do Usuario -->
+            <li>
+                <span class="welcome">Olá! Esse é seu painel, <a href="" class="user-name">Laura</a></span>
+            </li>
+            <!-- Dropdown de Orçamento -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                    <i class="fa fa-shopping-cart"></i><span id="qdtCarrinho" class="label label-warning">0</span>
+                </a>
+                <!-- Dropdown Vazio -->
+                <ul class="dropdown-menu dropdown-messages orcamento-drop">
+                    <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <h4 class="font-bold"> Nenhum Orçamento iniciado!</h4>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+
+                <!-- Esse é um Dropdown com um orçamento dentro do carrinho -->
+                <!-- Para visualuzar, retire esse parte de dentro do comentário -->
+                
+                <!--
+                <ul class="dropdown-menu dropdown-messages orcamento-drop show">
+                  <li>
+                          <div class="dropdown-messages-box">
+                              <div class="media-body">
+                                <h4 class="font-bold"> ALUA PRESENTES E ADORNOS LTDA</h4>
+                                <div class="dropdown-divider"></div>
+                              </div>
+                          </div>
+                          <div class="dropdown-messages-box d-flex">
+                              <a rel="nofollow" href="/Orcamentos/Carrinho/21949" class="btn btn-sm btn-primary pt-1">
+                                  <i class="fa fa-check-circle-o"></i> Checkout
+                              </a>
+                              <div class="card-options mr-0">
+                              <h3 class="total_valor_drop_check">
+                              Total: <span id="totalCarrinho2">R$ 106,31</span>
+                            </h3>
+                          </div>
+                          </div>
+                  </li>
+              </ul>-->
+
+            </li>
+            <!-- User Profile -->
+            <li>
+                <div class="dropdown main-profile-menu">
+                    <a data-toggle="dropdown" class="" href="">
+                        <span class="main-img-user">
+                            <!--Foto do usuario -->
+                            <img alt="avatar" src="../Images/user/perfil_foto.jpg"></span>
+                        </a>
+                        <ul class="dropdown-menu user-drop animated fadeInRight m-t-xs">
+                          <div class="drop-heading">
+                            <div class="text-center">
+                                <!-- Nome do usuario-->
+                              <h5 class="dropdown-name">Laura Sobrenome</h5>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle-o"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o"></i> Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Suporte</a></li>
+                            <li><a class="dropdown-item" href="/Login/LogOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+                </div>
+
+
+            </li>
+             <!-- Fim User Profile -->
+        </ul>
+    </nav>        
+</div>
+<!-- Fim do Bloco de Acesso do Usuario -->
+    
+<!-- Main view  -->
+<div class="wrapper wrapper-content">
+    
+<!--Titulo da Pagina-->
+<div class="page-header">
+    <h1 class="page-title mb-0">Detalhes do Cliente</h1>
+</div>
+
+<!--Perfil Representante-->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                    <div class="row">
+                        <!--Representantes-->
+                        <div class="col-lg-12 col-xl-12">
+
+                           
+                            <div class="widget-user-image1 d-xl-flex d-block">
+                                <img alt="User Avatar" class="avatar brround p-3" src="imgs/pic_cliente.jpg">
+                                <div class="ml-2">
+                                    <h2 class="representante-username">Acanto de Niteroi Presentes Ltda</h2>
+                                    <ul class="mb-0 cliente-detalhes">
+                                        <li>
+                                            <span class="representante-icon bg-warning-transparent text-warning">
+                                                <i class="fa fa-map-marker"></i></span><span class="h6 mt-3">
+                                                    Av. Ermani do Amaral Peixoto, 101
+                                                </span>
+                                            </li>
+
+                                            <li><span class="representante-icon bg-success-transparent text-success">
+                                                <i class="fa fa-phone"></i></span><span class="h6 mt-3">
+                                                    +55 (21) 26200664
+                                                </span>
+                                            </li>
+
+
+                                            <li><span class="representante-icon bg-danger-transparent text-info">
+                                                <i class="fa fa-envelope"></i></span><span class="h6 mt-3">
+                                                   <a href="mailto:email@email.com">email@email.comaaa</a>
+                                                </span>
+                                            </li>
+                                    
+                                        <li>
+                                            <span class="representante-icon bg-primary-transparent text-primary">
+                                                <i class="fa fa-location-arrow"></i></span><span class="h6 mt-3">
+                                                    Rio de Janeiro
+                                                </span>
+                                            </li>
+
+                                        <li><span class="representante-icon bg-info-transparent text-info">
+                                            <i class="fa fa-info"></i></span><span class="h6 mt-3">
+                                             CPF/CNPJ: 123.456.789-01
+                                            </span>
+                                        </li>
+                                        
+                                        <li><span class="representante-icon bg-secondary-transparent text-secondary">
+                                            <i class="fa fa-calendar"></i></span><span class="h6 mt-3">
+                                                12/08/1992
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+  
+                    </div><!--row-->
+                
+
+            </div><!--card-body---->
+
+        </div><!--card-->
+
+    </div><!--col-xl-12-->
+
+</div><!--Fim do Perfil Representante-->
+
+ <!--Sub Titulo da Pagina-->
+<div class="page-header">
+    <h2 class="page-sub-title mb-0">Posição Financeira</h2>
+    <!-- Incluso caso tenha botão do lado direito do titulo da página-->
+    <div class="d-flex">
+        <div class="justify-content-center">
+  
+          <div class="row">
+  
+            <div class="col-lg-6">
+              <div class="" id="data_1">
+                <label>Data Inicial</label>
+                <div class="input-group date">
+                   <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="05/05/2022">
+                </div>
+            </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="" id="data_2">
+                <label>Data Final</label>
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="05/05/2022">
+                </div>
+            </div>
+            </div>
+  
+          </div><!--row-->
+        </div><!--justify-->
+    </div><!--d-flex-->
+  </div>
+
+<!--Posição Financeira Cards-->
+<div class="row">
+
+    <!--Aberto-->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+        <div class="card custom-card border-0 dash1">
+            <div class="card-body">
+                <div class="row">
+                    <!--valores-->
+                    <div class="col-md-6 col-sm-6 col-6">
+                            <h3 class="faturamento">Aberto</h3>
+                            <h2 class="mb-1 font-weight-bold"><span class="small">R$</span> 0,00</h2>     
+                    </div>
+                    <!--graficos-->
+                    <div class="col-md-6 col-sm-6 col-6">
+                        <div id="sparkline-aberto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Quitados-->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+            <div class="card custom-card border-0 dash4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <!--Valores-->
+                                <h3 class="faturamento">Quitados</h3>
+                                <h2 class="mb-1 font-weight-bold"><span class="small">R$</span> 0,00</h2>     
+                        </div>
+                        <!--graficos-->
+                        <div class="col-md-6 col-sm-6 col-6">
+                            <div id="sparkline-quitados"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--Cartorio-->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+        <div class="card custom-card border-0 dash3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-6">
+                            <!--Valores-->
+                            <h3 class="faturamento">Cartório</h3>
+                            <h2 class="mb-1 font-weight-bold"><span class="small">R$</span> 0,00</h2>     
+                    </div>
+                    <!--graficos-->
+                    <div class="col-md-6 col-sm-6 col-6">
+                        <div id="sparkline-cartorio"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Vencidos-->
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+        <div class="card custom-card border-0 dash2">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-6">
+                        <!--Valores-->
+                            <h3 class="faturamento">Vencidos</h3>
+                            <h2 class="mb-1 font-weight-bold"><span class="small">R$</span> 0,00</h2>     
+                    </div>
+                    <!--graficos-->
+                    <div class="col-md-6 col-sm-6 col-6">
+                        <div id="sparkline-vencidos"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div><!--Fim Posição Financeira Cards-->
+
+<!-- Vendas-->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <h3 class="faturamento mb-3">Vendas</h3>
+                <div class="d-sm-flex justify-content-between ">
+                    <!-- Data da Compra-->
+                    <div class="mr-5 mb-3">
+                        <div class="main-profile-contact-list">
+                            <div class="media">
+                                <div class="media-icon bg-primary-transparent text-primary">
+                                    <i class="fa fa-calendar-o"></i>
+                                </div>
+                                <div class="media-body">
+                                    <span>Data da última compra</span>
+                                    <div> 12/08/2022</div>
+                                    <span>R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data da Maior Compra-->
+                    <div class="mr-5 mb-3">
+                        <div class="main-profile-contact-list">
+                            <div class="media">
+                                <div class="media-icon bg-success-transparent text-success">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <div class="media-body">
+                                    <span>Data da maior compra</span>
+                                    <div> 12/08/2022</div>
+                                    <span>R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Média de dias Pagamento-->
+                    <div class="mr-5 mb-3">
+                        <div class="main-profile-contact-list">
+                            <div class="media">
+                                <div class="media-icon bg-info-transparent text-info">
+                                    <i class="fa fa-money"></i>
+                                </div>
+                                <div class="media-body">
+                                    <span>Média de dias Pagamento</span>
+                                    <div> Dados aqui</div>
+                                    <span>R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Limite Credito-->
+                    <div class="mr-5 mb-3">
+                        <div class="main-profile-contact-list">
+                            <div class="media">
+                                <div class="media-icon bg-danger-transparent text-danger">
+                                    <i class="fa fa-credit-card"></i>
+                                </div>
+                                <div class="media-body">
+                                    <span>Limite de Crédito</span>
+                                    <div> Dados aqui</div>
+                                    <span>R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Credito Cliente-->
+                     <div class="mr-5 mb-3">
+                        <div class="main-profile-contact-list">
+                            <div class="media">
+                                <div class="media-icon bg-warning-transparent text-warning">
+                                    <i class="fa fa-credit-card-alt"></i>
+                                </div>
+                                <div class="media-body">
+                                    <span>Crédito do Cliente</span>
+                                    <div> Dados aqui</div>
+                                    <span>R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desconto-->
+                    <div class="mr-5 mb-3">
+                        <div class="main-profile-contact-list">
+                            <div class="media">
+                                <div class="media-icon bg-secondary-transparent text-secondary">
+                                    <i class="fa fa-percent"></i>
+                                </div>
+                                <div class="media-body">
+                                    <span>Desconto</span>
+                                    <div> Dados aqui</div>
+                                    <span>R$ 0,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--Fim Vendas-->
+
+<!-- Cards de Faturamento -->
+<div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xl-4">
+        <div class="card overflow-hidden custom-card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="">
+                        <h3 class="faturamento">Pedidos Faturados</h3>
+                        <h2 class="mb-0 number-font">R$ 0,00</h2>
+                    </div>
+                    <div class="ms-auto pr-2">
+                      <!--grafico lateral-->
+                      <span class="bar">5,3,9,6,5,9,7,3,5,2,8,5</span>
+                    </div>
+                </div>
+                <span class="text-muted fs-12">
+                    <span class="text-secondary">
+                        <i class="fa fa-arrow-circle-o-up text-secondary"></i> 5% </span> ná útima semana
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xl-4">
+        <div class="card overflow-hidden custom-card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="">
+                        <h3 class="faturamento">Faturamento Mensal</h3>
+                        <h2 class="mb-0 number-font">R$ 0,00</h2>
+                    </div>
+                    <div class="ms-auto pr-2">
+                       <!--grafico lateral-->
+                      <span class="line">5,3,9,6,5,9,7,3,5,2,8,4,2,3</span>
+                    </div>
+                </div>
+                <span class="text-muted fs-12">
+                    <span class="text-pink">
+                        <i class="fa fa-arrow-circle-o-down text-pink"></i> 0.75% </span> nos útimos 6 dias
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xl-4">
+        <div class="card overflow-hidden custom-card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="">
+                        <h3 class="faturamento">Faturamento Anual</h3>
+                        <h2 class="mb-0 number-font">R$ 0,00</h2>
+                    </div>
+                    <div class="ms-auto pr-2">
+                        <!--grafico lateral-->
+                      <span class="bar_anual">4,1,2,8,9,2,4,8,3,7,5,8</span>
+                    </div>
+                </div>
+                <span class="text-muted fs-12">
+                    <span class="text-green">
+                        <i class="fa fa-arrow-circle-o-up text-green"></i> 0.9% </span> na útima semana
+                </span>
+            </div>
+        </div>
+    </div>
+
+ </div><!-- Fim Cards de Faturamento -->
+
+
+
+<div class="row">
+    <!--Os mais vendidos-->
+
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+        <div class="card custom-card">
+          <div class="card-header d-flex">
+            <h4 class="card-title up-font">Produtos adquiridos pelo cliente</h4>
+            <div class="card-options">
+              <a href="" class="btn btn-sm btn-primary">Ver todos</a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover card-table table-vcenter text-nowrap">
+                 <!-- Titulos Tabela--> 
+                <thead class="border-bottom-0 pt-3 pb-3">
+                  <tr>
+                    <th class="text-center">Código</th>
+                    <th>Nome do Produto</th>
+                    <th>Categoria</th>
+                    <th>Valor</th>
+                    <th>Info da venda</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <!-- Linha 1 -->
+                  <tr>
+                    <td class="text-center td-top-produtos">1</td>
+                    <td>
+                      <img class="avatat avatar-md brround me-2" src="../Images/produtos/produto_top_1.jpg" alt="img" /> Nome do Produto 1
+                    </td>
+                    <td class="fs-13 td-top-produtos">
+                      <span class="me-2 w-2 h-2"></span><a class="" href="">Decoração</a>
+                    </td>
+                    <td class="td-top-produtos">
+                        <span class="">R$ 0,00</span>
+                      </td>
+                    <td class="text-muted td-top-produtos">Há 3 dias atrás</td>
+                    <td class="td-top-produtos">
+                      <span class="badge fs-11 bg-success-transparent text-success ms-2">Em estoque</span>
+                    </td>
+                  </tr>
+                  <!-- Linha 2 -->
+                  <tr>
+                    <td class="text-center td-top-produtos">2</td>
+                    <td>
+                      <img class="avatat avatar-md brround me-2" src="../Images/produtos/produto_top_2.jpg" alt="img" /> Nome do Produto 2
+                    </td>
+                    <td class="fs-13 td-top-produtos">
+                      <span class="me-2 w-2 h-2"></span><a class="" href="">Calçados</a>
+                    </td>
+                    <td class="td-top-produtos">
+                        <span class="">R$ 0,00</span>
+                      </td>
+                    <td class="text-muted td-top-produtos">Há 2 dias atrás</td>
+                    <td class="td-top-produtos">
+                      <span class="badge fs-11 bg-secondary-transparent text-secondary ms-2">Melhor venda</span>
+                    </td>
+                  </tr>
+                    <!-- Linha 3 -->
+                  <tr>
+                    <td class="text-center td-top-produtos">3</td>
+                    <td>
+                      <img class="avatat avatar-md brround me-2" src="../Images/produtos/produto_top_3.jpg" alt="img" /> Nome do Produto 3
+                    </td>
+                    <td class="fs-13 td-top-produtos">
+                      <span class="me-2 w-2 h-2"></span><a class="" href="">Acessórios</a>
+                    </td>
+                    <td class="td-top-produtos">
+                        <span class="">R$ 0,00</span>
+                      </td>
+                    <td class="text-muted td-top-produtos">Há 5 dias atrás</td>
+                    <td class="td-top-produtos">
+                      <span class="badge fs-11 bg-danger-transparent text-danger ms-2">Fora de estoque</span>
+                    </td>
+                  </tr>
+                    <!-- Linha 4 -->
+                  <tr>
+                    <td class="text-center td-top-produtos">4</td>
+                    <td>
+                      <img class="avatat avatar-md brround me-2" src="../Images/produtos/produto_top_4.jpg" alt="img" /> Nome do Produto 4
+                    </td>
+                    <td class="fs-13 td-top-produtos">
+                      <span class="me-2 w-2 h-2"></span><a class="" href="">Eletrônicos</a>
+                    </td>
+                    <td class="td-top-produtos">
+                        <span class="">R$ 0,00</span>
+                      </td>
+                    <td class="td-top-produtos text-muted">Hoje</td>
+                    <td class="td-top-produtos">
+                      <span class="badge fs-11 bg-success-transparent text-success text-success ms-2">Em estoque</span>
+                    </td>
+                    <!-- Linha 5 -->
+                  </tr>
+                  <tr>
+                    <td class="text-center td-top-produtos">5</td>
+                    <td>
+                      <img class="avatat avatar-md brround me-2" src="../Images/produtos/produto_top_5.jpg" alt="img" /> Nome do Produto 5
+                    </td>
+                    <td class="fs-13 td-top-produtos">
+                      <span class="dot-label bg-info me-2 w-2 h-2"></span><a class="" href="">Informática</a>
+                    </td>
+                    <td class="td-top-produtos">
+                        <span class="">R$ 0,00</span>
+                      </td>
+                    <td class="text-muted td-top-produtos">5 dias atrás</td>
+                    <td class="td-top-produtos">
+                      <span class="badge fs-11 bg-info-transparent text-info ms-2 mb-0">Mais Buscado</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div class="row">
+    <!--Mapa do Cliente-->
+    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h4 class="card-title up-font">Mapa</h4>
+            </div>
+            <div class="card-body">
+                <div class="google-map" id="map1" style="height: 500px"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Street View-->
+    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h4 class="card-title up-font">Street View</h4>
+            </div>
+            <div class="card-body">
+                <div class="google-map" id="pano" style="height: 500px"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</div><!-- End wrapper wrapper-content -->
+
+<!-- Footer -->
+            <div class="footer">
+    <div class="float-right">
+       Sistema de Vendas
+    </div>
+    <div>
+        <strong>Copyright</strong> CCPSytem &copy; 2000 - 2020
+    </div>
+</div>
+
+
+</div><!-- End page wrapper-->
+
+</div><!-- End wrapper-->
+
+<!-- Main Scripts -->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/Popper/popper.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../lib/metisMenu/dist/jquery.metisMenu.js"></script>
+<script src="../lib/pace/pace.min.js"></script>
+<script src="../lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/site.js"></script>    
+
+<!-- Others Scripts -->
+<script src="../lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="../https://cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script src="../js/ej.culture.pt-BR.min.js"></script>
+
+<!--Graficos Demo - Faturamente Diario, mensal e anual-->
+<script src="../js/plugins/peity/jquery.peity.min.js"></script>
+<script>
+ $(function() {
+    $("span.pie").peity("pie", {
+        fill: ['#1ab394', '#d7d7d7', '#ffffff']
+    })
+
+    $(".line").peity("line",{
+        fill: '#fff',
+        stroke:'#ec82ef',
+        width:100,
+        height:80
+    })
+
+    $(".bar").peity("bar", {
+        fill: ["#05c3fb", "#ccf2fd"],
+        width:100,
+        height:80
+    })
+
+    $(".bar_anual").peity("bar", {
+      fill: ["#4ecc48", "#c1f7bf"],
+        width:100,
+        height:80
+        
+    })
+
+    var updatingChart = $(".updating-chart").peity("line", { fill: '#1ab394',stroke:'#169c81', width: 64 })
+
+    setInterval(function() {
+        var random = Math.round(Math.random() * 10)
+        var values = updatingChart.text().split(",")
+        values.shift()
+        values.push(random)
+
+        updatingChart
+            .text(values.join(","))
+            .change()
+    }, 1000);
+
+});
+</script>
+
+<!--Graficos Demo - Posição Financeira-->
+<!-- Sparkline -->
+<script src="../js/plugins/sparkline/jquery.sparkline.min.js"></script>  
+<script>
+    $(document).ready(function() {
+
+        var sparklineCharts = function(){
+             $("#sparkline-aberto").sparkline([34, 43, 43, 35, 44, 32, 44, 52], {
+                 type: 'line',
+                 width: '100%',
+                 height: '60',
+                 lineColor: 'rgba(255,255,255,0.5)',
+                 fillColor: "rgba(255,255,255,0)"
+             });
+
+             $("#sparkline-vencidos").sparkline([24, 43, 43, 55, 44, 62, 44, 72], {
+                 type: 'line',
+                 width: '100%',
+                 height: '60',
+                 lineColor: 'rgba(255,255,255,0.5)',
+                 fillColor: "rgba(255,255,255,0)"
+             });
+
+             $("#sparkline-cartorio").sparkline([74, 43, 23, 55, 54, 32, 24, 12], {
+                 type: 'line',
+                 width: '100%',
+                 height: '60',
+                 lineColor: 'rgba(255,255,255,0.5)',
+                 fillColor: "rgba(255,255,255,0)"
+             });
+
+             $("#sparkline-quitados").sparkline([24, 43, 33, 55, 64, 72, 44, 22], {
+                 type: 'line',
+                 width: '100%',
+                 height: '60',
+                 lineColor: 'rgba(255,255,255,0.5)',
+                 fillColor: "rgba(255,255,255,0)"
+             });
+
+             
+        };
+
+        var sparkResize;
+
+        $(window).resize(function(e) {
+            clearTimeout(sparkResize);
+            sparkResize = setTimeout(sparklineCharts, 500);
+        });
+
+        sparklineCharts();
+
+
+    });
+</script>
+
+<!-- Script google maps-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc_GeZOnG2XZ-pKz_kRn8A5GmVL5ckd7Q"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Clientes/GraficoTitulos/000002",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (mems) {
+                var aData = mems;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+
+                var lineData = {
+                    labels: aLabels,
+                    datasets: [
+                        {
+                            backgroundColor: ["#008000", "#bec2cb", "#FFFF00", "#FF0000"],
+                            data: aDatasets1
+                        },
+
+                    ]
+                };
+
+                var lineOptions = {
+                    responsive: true,
+                    legend: {
+                        display: false
+                    }
+                };
+
+                var ctx = document.getElementById("pieChart").getContext("2d");
+                new Chart(ctx, { type: 'doughnut', data: lineData, options: lineOptions });
+
+            }
+        });
+    });
+
+    // When the window has finished loading google map
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Options for Google map
+        // More info see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions1 = {
+            zoom: 17,
+
+            center: new google.maps.LatLng(-22.8937903, -43.1187697),
+            // Style for Google Maps
+            styles: [{ "featureType": "water", "stylers": [{ "saturation": 43 }, { "lightness": -11 }, { "hue": "#0088ff" }] }, { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "hue": "#ff0000" }, { "saturation": -100 }, { "lightness": 99 }] }, { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "color": "#808080" }, { "lightness": 54 }] }, { "featureType": "landscape.man_made", "elementType": "geometry.fill", "stylers": [{ "color": "#ece2d9" }] }, { "featureType": "poi.park", "elementType": "geometry.fill", "stylers": [{ "color": "#ccdca1" }] }, { "featureType": "road", "elementType": "labels.text.fill", "stylers": [{ "color": "#767676" }] }, { "featureType": "road", "elementType": "labels.text.stroke", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "poi", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape.natural", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#b8cb93" }] }, { "featureType": "poi.park", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.sports_complex", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.medical", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi.business", "stylers": [{ "visibility": "simplified" }] }]
+        };
+
+        var fenway = new google.maps.LatLng(-22.8937903, -43.1187697);
+        var mapOptions5 = {
+            zoom: 14,
+            center: fenway,
+            // Style for Google Maps
+            styles: [{ featureType: "landscape", stylers: [{ saturation: -100 }, { lightness: 65 }, { visibility: "on" }] }, { featureType: "poi", stylers: [{ saturation: -100 }, { lightness: 51 }, { visibility: "simplified" }] }, { featureType: "road.highway", stylers: [{ saturation: -100 }, { visibility: "simplified" }] }, { featureType: "road.arterial", stylers: [{ saturation: -100 }, { lightness: 30 }, { visibility: "on" }] }, { featureType: "road.local", stylers: [{ saturation: -100 }, { lightness: 40 }, { visibility: "on" }] }, { featureType: "transit", stylers: [{ saturation: -100 }, { visibility: "simplified" }] }, { featureType: "administrative.province", stylers: [{ visibility: "off" }]/**/ }, { featureType: "administrative.locality", stylers: [{ visibility: "off" }] }, { featureType: "administrative.neighborhood", stylers: [{ visibility: "on" }]/**/ }, { featureType: "water", elementType: "labels", stylers: [{ visibility: "on" }, { lightness: -25 }, { saturation: -100 }] }, { featureType: "water", elementType: "geometry", stylers: [{ hue: "#ffff00" }, { lightness: -25 }, { saturation: -97 }] }]
+        };
+
+        var panoramaOptions = {
+            position: fenway,
+            pov: {
+                heading: 10,
+                pitch: 10
+            }
+        };
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+
+        // Get all html elements for map
+        var mapElement1 = document.getElementById('map1');
+
+
+        // Create the Google Map using elements
+        var map1 = new google.maps.Map(mapElement1, mapOptions1);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(-22.8937903, -43.1187697),
+            animation: google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map1);
+    }
+
+</script>
+
+<!-- Script input de data -->
+<script src="../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="../js/plugins/datapicker/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+<script>
+    var mem = 
+    
+        $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true,
+                language: "pt-BR"
+            });
+
+            $('#data_2 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true, 
+                autoclose: true,
+                language: "pt-BR"
+            });
+</script>
+
+ <!--Script que eu nao sei mas nao quis apagar --> 
+<script>
+
+        document.getElementById('btnexportapdf').onclick = function () {
+            var gridObj = document.getElementById("Grid").ej2_instances[0];
+            gridObj.showSpinner();
+            gridObj.pdfExport();
+
+        }
+
+        document.getElementById('btnexportaexcel').onclick = function () {
+            var gridObj = document.getElementById("Grid").ej2_instances[0];
+            gridObj.showSpinner();
+            gridObj.excelExport();
+        }
+
+        document.getElementById('btnprint').onclick = function () {
+            document.getElementById('Grid').ej2_instances[0].print();
+        }
+
+        function pdfExportComplete(args) {
+            this.hideSpinner();
+        }
+
+        function excelExportComplete(args) {
+            this.hideSpinner();
+        }
+    </script>
+
+    <script>new ejs.grids.Grid({
+  "allowExcelExport": true,
+  "allowFiltering": true,
+  "allowGrouping": true,
+  "allowPaging": true,
+  "allowPdfExport": true,
+  "allowSorting": true,
+  "columns": [
+    {
+      "field": "Referencia",
+      "headerText": "Codigo",
+      "width": "80"
+    },
+    {
+      "field": "Descricao",
+      "headerText": "Descrição",
+      "width": "180"
+    },
+    {
+      "field": "categoria",
+      "headerText": "Categoria",
+      "width": "90"
+    },
+    {
+      "field": "Venda",
+      "format": "N2",
+      "headerText": "Total Vendas",
+      "textAlign": "Right",
+      "width": "80"
+    },
+    {
+      "field": "Estoque",
+      "format": "N0",
+      "headerText": "Total Produtos",
+      "textAlign": "Right",
+      "width": "80"
+    },
+    {
+      "field": "TicketMedio",
+      "format": "N2",
+      "headerText": "Ticket Médio",
+      "textAlign": "Right",
+      "width": "80"
+    }
+  ],
+  "dataSource": ejs.data.DataUtil.parse.isJson([]),
+  "frozenColumns": 0.0,
+  "frozenRows": 0.0,
+  "locale": "pt",
+  "pageSettings": {
+    "currentPage": 1.0,
+    "pageCount": 8.0,
+    "pageSize": 30.0
+  },
+  "selectedRowIndex": -1.0,
+  "excelExportComplete": excelExportComplete,
+  "pdfExportComplete": pdfExportComplete
+}).appendTo("#Grid"); 
+</script>
+
+</body>
+</html>
