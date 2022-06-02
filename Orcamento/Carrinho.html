@@ -1,0 +1,905 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orçamento 23915 | Venduus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#513693">
+
+     <!-- Add local styles, mostly for plugins css file -->
+     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css" />
+     <link rel="stylesheet" href="../css/animate.css" />
+     <link rel="stylesheet" href="../css/style.css" /> 
+
+     <!--Plugin Data Table-->
+     <link rel="stylesheet" href="../css/plugins/dataTables/datatables.min.css">
+     
+    <!-- Favicon | Icon Site -->
+    <link rel="icon" href="../Images/icon/favicon_venduus-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../Images/icon/favicon_venduus-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../Images/icon/favicon_venduus-32x32.png" />
+
+</head>
+<body>
+
+
+<!-- Wrapper-->
+<div id="wrapper" class="Catalogo_Grid">
+
+<!-- Navigation -->    
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+      <ul class="nav metismenu" id="side-menu">
+          <li class="nav-header">
+              <div class="dropdown profile-element">
+                  <a href="../index.html">
+                      <img alt="image" width="130" height="70" src="../Images/venduus-vertical-branco-so-fonte.png" />
+                  </a>
+                  
+              </div>
+              <div class="logo-element">
+                <img alt="image" width="45" height="25" src="../Images/venduus-vertical-branco-so-fonte.png" />
+            </div>
+          </li>
+
+              <li class="">
+                  <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label" data-i18n="nav.graphs">Dashboard</span><span class="fa arrow"></span></a>
+
+                  <ul class="nav nav-second-level">
+                      <li class=""><a href="../index.html">Principal</a></li>
+                  </ul>
+              </li>
+              <li class="">
+                  <a href="#"><i class="fa fa-users"></i><span class="nav-label" data-i18n="nav.graphs">Clientes</span><span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse ">
+                    <li class="active"><a href="../Clientes/Clientes.html">Lista de Clientes</a></li>
+                      <li class=""><a href="../Clientes/Cadastro.html">Cadastro</a></li>
+                  </ul>
+              </li>
+              <li class="">
+                  <a href="#"><i class="fa fa-money"></i><span class="nav-label" data-i18n="nav.graphs">Cobrança</span><span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse">
+                      <li class="active"><a href="../Cobranca/Cobranca.html">Consulta</a></li>
+                  </ul>
+              </li>
+              <li class="">
+                  <a href="#"><i class="fa fa-file-text"></i><span class="nav-label" data-i18n="nav.graphs">Notas Fiscais</span><span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse ">
+                      <li class="active"><a href="../NotasFiscais/NotasFiscais.html">Consulta</a></li>
+                  </ul>
+              </li>
+              <li class="active">
+                  <a href="#"><i class="fa fa-pencil-square-o"></i><span class="nav-label" data-i18n="nav.graphs">Orçamentos</span><span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse in">
+                      <li class="active"><a href="../Orcamento/Orcamentos.html">Entrada</a></li>
+                  </ul>
+              </li>
+              <li class="">
+                  <a href="#"><i class="fa fa-list-alt"></i><span class="nav-label" data-i18n="nav.graphs">Pedidos</span><span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse ">
+                      <li class="active"><a href="../Pedidos/Pedidos.html">Consulta</a></li>
+                  </ul>
+              </li>
+              <li class="">
+                  <a href="#"><i class="fa fa-tags"></i><span class="nav-label" data-i18n="nav.graphs">Produtos</span><span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse ">
+                      <li class=""><a href="../Produtos/Catalogo_Grid.html">Catálogo Virtual</a></li>
+                      <li class=""><a href="../Produtos/Catalogo_Galeria.html">Catálogo Galeria</a></li>
+
+                  </ul>
+              
+              <li class="">
+                  <a href="#"><i class="fa fa-briefcase"></i><span class="nav-label" data-i18n="nav.graphs">Representante</span><span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse ">
+                      <li class="active"><a href="../Representantes/Representantes.html">Consulta</a></li>
+                  </ul>
+              </li>
+
+
+             
+      </ul>
+  </div>
+</nav>
+<!-- Fim do Navigation -->
+
+
+<!-- Page wraper -->
+<div id="page-wrapper" class="gray-bg">
+           
+    <!-- Bloco de Acesso do Usuario -->           
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <!-- Frase de Apresentação do Usuario -->
+            <li>
+                <span class="welcome">Olá! Esse é seu painel, <a href="" class="user-name">Laura</a></span>
+            </li>
+            <!-- Dropdown de Orçamento -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                    <i class="fa fa-shopping-cart"></i><span id="qdtCarrinho" class="label label-warning">0</span>
+                </a>
+                <!-- Dropdown Vazio -->
+                <ul class="dropdown-menu dropdown-messages orcamento-drop">
+                    <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <h4 class="font-bold"> Nenhum Orçamento iniciado!</h4>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+
+                <!-- Esse é um Dropdown com um orçamento dentro do carrinho -->
+                <!-- Para visualuzar, retire esse parte de dentro do comentário -->
+                
+                <!--
+                <ul class="dropdown-menu dropdown-messages orcamento-drop show">
+                  <li>
+                          <div class="dropdown-messages-box">
+                              <div class="media-body">
+                                <h4 class="font-bold"> ALUA PRESENTES E ADORNOS LTDA</h4>
+                                <div class="dropdown-divider"></div>
+                              </div>
+                          </div>
+                          <div class="dropdown-messages-box d-flex">
+                              <a rel="nofollow" href="/Orcamentos/Carrinho/21949" class="btn btn-sm btn-primary pt-1">
+                                  <i class="fa fa-check-circle-o"></i> Checkout
+                              </a>
+                              <div class="card-options mr-0">
+                              <h3 class="total_valor_drop_check">
+                              Total: <span id="totalCarrinho2">R$ 106,31</span>
+                            </h3>
+                          </div>
+                          </div>
+                  </li>
+              </ul>-->
+
+            </li>
+            <!-- User Profile -->
+            <li>
+                <div class="dropdown main-profile-menu">
+                    <a data-toggle="dropdown" class="" href="">
+                        <span class="main-img-user">
+                            <!--Foto do usuario -->
+                            <img alt="avatar" src="../Images/user/perfil_foto.jpg"></span>
+                        </a>
+                        <ul class="dropdown-menu user-drop animated fadeInRight m-t-xs">
+                          <div class="drop-heading">
+                            <div class="text-center">
+                                <!-- Nome do usuario-->
+                              <h5 class="dropdown-name">Laura Sobrenome</h5>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle-o"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o"></i> Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Suporte</a></li>
+                            <li><a class="dropdown-item" href="/Login/LogOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+                </div>
+
+
+            </li>
+             <!-- Fim User Profile -->
+        </ul>
+    </nav>        
+</div>
+<!-- Fim do Bloco de Acesso do Usuario -->
+    
+<!-- Main view  -->
+<div class="wrapper wrapper-content">
+<!--Titulo da Pagina-->
+<div class="page-header">
+    <h1 class="page-title mb-0">Orçamento 23915 <small>Data: <span id="data-orcamento">04/05/2022</span> <span id="hora-orcamento">00:00:00</span></small></h1>
+</div>
+
+<!--Perfil Representante-->
+<div class="row">
+    <div class="col-xl-6 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                    <div class="row">
+                        <!--Cliente-->
+                        <div class="col-lg-12 col-xl-12">
+                            <div class="widget-user-image1 d-xl-flex d-block">
+                               
+                                <div class="ml-2">
+                                    <p class="mb-0 text-primary">Cliente</p>
+                                    <h2 class="representante-username">Kasamigas Comercio Ltda</h2>
+                                    <ul class="mb-0 representante-detalhes">
+                                        
+                                        <li>
+                                            <span class="representante-icon bg-danger-transparent text-danger">
+                                                <i class="fa fa-envelope"></i></span><span class="h6 mt-3">
+                                                    <a href="mailto:email@hotmail.com">email@hotmail.com</a>
+                                                </span>
+                                            </li>
+                                        <li><span class="representante-icon bg-success-transparent text-success">
+                                            <i class="fa fa-phone"></i></span><span class="h6 mt-3">
+                                                +55 (11) 7751-2048
+                                            </span>
+                                        </li>
+                                        <li>
+                                          <span class="representante-icon bg-info-transparent text-info">
+                                              <i class="fa fa-info"></i></span><span class="h6 mt-3">
+                                                CNJP: 38.412.630/0001-46
+                                              </span>
+                                          </li>
+                                      <li><span class="representante-icon bg-warning-transparent text-warning">
+                                          <i class="fa fa-map-marker"></i></span><span class="h6 mt-3">
+                                              São Paulo - SP
+                                          </span>
+                                      </li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--row-->
+            </div><!--card-body---->
+        </div><!--card-->
+    </div><!--col-xl-12-->
+
+    <div class="col-xl-6 col-lg-12 col-md-12">
+      <div class="card custom-card">
+          <div class="card-body">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-auto col-xl-12">
+                          <div class="ml-2">
+                              <p class="mb-0 text-info">Representante</p>
+                              <h2 class="representante-username">Guara Representações</h2>
+                              <ul class="mb-0 representante-detalhes">
+                          
+                                  <li><span class="representante-icon bg-danger-transparent text-danger">
+                                      <i class="fa fa-envelope"></i></span><span class="h6 mt-3">
+                                          <a href="mailto:email@email.com">email@email.com</a>
+                                      </span>
+                                  </li>
+
+                                  <li><span class="representante-icon bg-success-transparent text-success">
+                                    <i class="fa fa-phone"></i></span><span class="h6 mt-3">
+                                        +55 (11) 7751-2048
+                                    </span>
+                                </li>
+
+                                <li><span class="representante-icon bg-info-transparent text-info">
+                                  <i class="fa fa-info"></i></span><span class="h6 mt-3">
+                                      +55 (11) 7751-2048
+                                  </span>
+                              </li>
+                                 
+                              </ul>
+                          </div>
+                          
+                       </div>
+
+                  </div><!--row-->
+
+          </div><!--card-body---->
+      </div><!--card-->
+  </div><!--col-xl-12-->
+</div><!--Fim do Perfil Representante-->
+
+<!-- Cards de pagamento, desconto e Orçamento -->
+<div class="row">
+
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xl-7">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h4 class="card-title up-font">Dados de Pagamento</h4>
+            </div>
+            <div class="card-body">
+             <h3 class="mb-5">Selecione a seguir os dados correspondentes:</h3>
+              <!--Condições de Pagamento-->
+              <div class="form-group row mb-4">
+                <label class="col-sm-3 col-form-label">Condições de Pagamento:</label>
+
+                <div class="col-sm-9">
+                  <input type="text" placeholder="Insira as condições de pagamento" class="typeahead_3 form-control" />
+                </div>
+            </div>
+
+             <!--Condições de Pagamento-->
+             <div class="form-group row mb-4">
+              <label class="col-sm-3 col-form-label">Descontos:</label>
+
+              <div class="col-sm-9">
+                <input type="text" placeholder="Insira valor de desconto" class="typeahead_1 form-control" />
+              </div>
+          </div>
+
+               <!--Ordem-->
+               <div class="form-group row mb-4">
+                <label class="col-sm-3 col-form-label">Ordem:</label>
+  
+                <div class="col-sm-9">
+                  <input type="text" placeholder="Informe a ordem" class="typeahead_2 form-control" />
+                </div>
+            </div>
+            
+        </div><!--card-body-->
+    </div>
+</div>
+
+
+    <div class="col-lg-6 col-md-12 col-sm-12 col-xl-5">
+        <div class="card custom-card">
+            <div class="card-header">
+                <h4 class="card-title up-font">Resumo do Orçamento - <span class="font-extra-bold">23915</span></h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover card-table table-vcenter text-nowrap fz-1">
+                       <!-- Titulos Tabela--> 
+                      <thead class="border-bottom-0 pt-3 pb-3">
+                        <tr>
+                          <th class="text-left">Disponibilidade</th>
+                          <th class="text-center">Quantidade</th>
+                          <th class="text-right">Total</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <!-- Linha 1 -->
+                        <tr>
+                          <td class="text-muted td-top-produtos text-left">Pronta Entrega</td>
+                          <td class="text-muted td-top-produtos text-center">24</td>
+                          <td class="text-muted td-top-produtos text-right">R$ 6.708,46</td>
+                        </tr>
+                         <!-- Linha 2 -->
+                         <tr>
+                            <td class="text-muted td-top-produtos text-left">Entrega Futura</td>
+                            <td class="text-muted td-top-produtos text-center">0</td>
+                            <td class="text-muted td-top-produtos text-right">R$ 0,00</td>
+                          </tr>
+                          <!-- Linha 3 -->
+                         <tr>
+                            <td class="text-muted td-top-produtos text-left">Indisponível</td>
+                            <td class="text-muted td-top-produtos text-center">0</td>
+                            <td class="text-muted td-top-produtos text-right">R$ 0,00</td>
+                          </tr>
+
+                           <!-- Linha 4 -->
+                         <tr>
+                          <td colspan="3" class="td-top-produtos text-right font-extra-bold fz-1"><small>Valor Total:</small> R$ 6.708,46</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                  
+                  <!--Botões fechamento-->
+                  <div class="row">
+                    <div class="col-xl-3 mb-2">
+                      <a href="/Orcamentos/GerarPDF/23915" onclick="msgpdf()" class="btn btn-info btn-lg w-100"> <i class="fa fa-file-pdf-o mr-2"></i>Imprimir</a>
+                    </div>
+                    <div class="col-xl-3 mb-2">
+                      <a href="" id="btnemail" class="btn btn-warning btn-lg w-100"><i class="fa fa-envelope mr-2"></i> Email</a>
+      
+                    </div>
+                    <div class="col-xl-3 mb-2">
+                      <a href="" id="btnsalvar" class="btn btn-success btn-lg w-100"><i class="fa fa-save mr-2"></i> Salvar</a>
+                    </div>
+                    <div class="col-xl-3 mb-2">
+                      <a href="" id="btnfinalizar" class="btn btn-primary btn-lg w-100"><i class="fa fa-shopping-cart mr-2"></i> Finalizar</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+ </div><!-- Fim  Cards de pagamento, desconto e Orçamento-->
+
+<div class="row">
+    <!--Os mais vendidos-->
+
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+        <div class="card custom-card">
+          <div class="card-header">
+            <h4 class="card-title up-font">Lista de itens do Pedido</h4>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered dataTables">
+                 <!-- Titulos Tabela--> 
+                <thead class="border-bottom-0 pt-3 pb-3">
+                  <tr>
+                    <th class="text-center">Item</th>
+                    <th class="text-center">Produto</th>
+                    <th>Nome do Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor do Produto</th>
+                    <th>SubTotal</th>
+                    <th>Impostos</th>
+                    <th>Descontos</th>
+                    <th>Total</th>
+                    <th>Ação</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <!-- Linha 1 -->
+                  <tr>
+                    <!--Item--><td class="text-center td-top-produtos">AL0014</td>
+                    <!--Produto--><td class="text-center"><img class="avatat avatar-md bradius me-2" src="Imgs/produtos/AL0014.jpg" alt="img" /></td>
+                    <!--Nome do Produto--><td class="td-top-produtos">Cj. de Caixas de Madeira Preto Com Puxador de Bambu - 3pcs</td>
+                     <!--Quantidade--><td class="td-top-produtos">
+                      
+                              <!--Input Ascrescer e Diminuir-->
+                              <div class="input-group w-60 w-sm-60 mx-auto">
+                                <span class="input-group-btn">
+                                  <!--botão add -->
+                                    <button type="button" class="minus btn btn-white btn-number">
+                                        <i class="fa fa-minus text-muted"></i>
+                                    </button>
+                                </span>
+                                
+                                <input type="text" name="quantity" class="form-control text-center qty no-border" value="1">
+                                <span class="input-group-btn">
+                                  <!--botão sub -->
+                                    <button type="button" class="quantity-right-plus btn btn-white btn-number add">
+                                        <i class="fa fa-plus text-muted"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                      </td>
+                    <!--Valor do Produto--><td class="td-top-produtos"><span class="">R$ 363,88</span></td>
+                    <!--SubTotal--><td class="td-top-produtos">R$ 363,88</td>
+                    <!--Impostos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Descontos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Total--><td class="td-top-produtos font-extra-bold">R$ 363,88</td>
+                    <!--Ação--><td class="td-top-produtos text-center">
+                                  <a class="btn text-danger bg-danger-transparent btn-icon py-1" data-toggle="tooltip" data-placement="top" title="Deletar Item"><span class="fa fa-trash-o"></span></a>
+                               </td>
+                  </tr>
+
+                  <!-- Linha 2 -->
+                  <tr>
+                    <!--Item--><td class="text-center td-top-produtos">AV0008</td>
+                    <!--Produto--><td class="text-center"><img class="avatat avatar-md bradius me-2" src="Imgs/produtos/AV0008.jpg" alt="img" /></td>
+                    <!--Nome do Produto--><td class="td-top-produtos">Suporte para Controle Remoto de Couro Marrom</td>
+                     <!--Quantidade--><td class="td-top-produtos">
+                      
+                              <!--Input Ascrescer e Diminuir-->
+                              <div class="input-group w-60 w-sm-60 mx-auto">
+                                <span class="input-group-btn">
+                                  <!--botão add -->
+                                    <button type="button" class="minus btn btn-white btn-number">
+                                        <i class="fa fa-minus text-muted"></i>
+                                    </button>
+                                </span>
+                                
+                                <input type="text" name="quantity" class="form-control text-center qty no-border" value="2">
+                                <span class="input-group-btn">
+                                  <!--botão sub -->
+                                    <button type="button" class="quantity-right-plus btn btn-white btn-number add">
+                                        <i class="fa fa-plus text-muted"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                      </td>
+                    <!--Valor do Produto--><td class="td-top-produtos"><span class="">100,73</span></td>
+                    <!--SubTotal--><td class="td-top-produtos">R$ 201,46</td>
+                    <!--Impostos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Descontos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Total--><td class="td-top-produtos font-extra-bold">R$ 201,46</td>
+                    <!--Ação--><td class="td-top-produtos text-center">
+                                  <a class="btn text-danger bg-danger-transparent btn-icon py-1" data-toggle="tooltip" data-placement="top" title="Deletar Item"><span class="fa fa-trash-o"></span></a>
+                               </td>
+                  </tr>
+
+                  <!-- Linha 3 -->
+                  <tr>
+                    <!--Item--><td class="text-center td-top-produtos">AV0009</td>
+                    <!--Produto--><td class="text-center"><img class="avatat avatar-md bradius me-2" src="Imgs/produtos/AV0009.jpg" alt="img" /></td>
+                    <!--Nome do Produto--><td class="td-top-produtos">Suporte para Controle Remoto de Couro Preto</td>
+                     <!--Quantidade--><td class="td-top-produtos">
+                      
+                              <!--Input Ascrescer e Diminuir-->
+                              <div class="input-group w-60 w-sm-60 mx-auto">
+                                <span class="input-group-btn">
+                                  <!--botão add -->
+                                    <button type="button" class="minus btn btn-white btn-number">
+                                        <i class="fa fa-minus text-muted"></i>
+                                    </button>
+                                </span>
+                                
+                                <input type="text" name="quantity" class="form-control text-center qty no-border" value="2">
+                                <span class="input-group-btn">
+                                  <!--botão sub -->
+                                    <button type="button" class="quantity-right-plus btn btn-white btn-number add">
+                                        <i class="fa fa-plus text-muted"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                      </td>
+                    <!--Valor do Produto--><td class="td-top-produtos"><span class="">100,73</span></td>
+                    <!--SubTotal--><td class="td-top-produtos">R$ 201,46</td>
+                    <!--Impostos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Descontos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Total--><td class="td-top-produtos font-extra-bold">R$ 201,46</td>
+                    <!--Ação--><td class="td-top-produtos text-center">
+                                  <a class="btn text-danger bg-danger-transparent btn-icon py-1" data-toggle="tooltip" data-placement="top" title="Deletar Item"><span class="fa fa-trash-o"></span></a>
+                               </td>
+                  </tr>
+
+                   <!-- Linha 3 -->
+                   <tr>
+                    <!--Item--><td class="text-center td-top-produtos">BF2025</td>
+                    <!--Produto--><td class="text-center"><img class="avatat avatar-md bradius me-2" src="Imgs/produtos/BF2025.jpg" alt="img" /></td>
+                    <!--Nome do Produto--><td class="td-top-produtos">Vaso Em Vidro Verde</td>
+                     <!--Quantidade--><td class="td-top-produtos">
+                      
+                              <!--Input Ascrescer e Diminuir-->
+                              <div class="input-group w-60 w-sm-60 mx-auto">
+                                <span class="input-group-btn">
+                                  <!--botão add -->
+                                    <button type="button" class="minus btn btn-white btn-number">
+                                        <i class="fa fa-minus text-muted"></i>
+                                    </button>
+                                </span>
+                                
+                                <input type="text" name="quantity" class="form-control text-center qty no-border" value="2">
+                                <span class="input-group-btn">
+                                  <!--botão sub -->
+                                    <button type="button" class="quantity-right-plus btn btn-white btn-number add">
+                                        <i class="fa fa-plus text-muted"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                      </td>
+                    <!--Valor do Produto--><td class="td-top-produtos"><span class="">175,763</span></td>
+                    <!--SubTotal--><td class="td-top-produtos">R$ 351,52</td>
+                    <!--Impostos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Descontos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Total--><td class="td-top-produtos font-extra-bold">R$ 351,52</td>
+                    <!--Ação--><td class="td-top-produtos text-center">
+                                  <a class="btn text-danger bg-danger-transparent btn-icon py-1" data-toggle="tooltip" data-placement="top" title="Deletar Item"><span class="fa fa-trash-o"></span></a>
+                               </td>
+                  </tr>
+
+                  <!-- Linha 3 -->
+                  <tr>
+                    <!--Item--><td class="text-center td-top-produtos">BH0070</td>
+                    <!--Produto--><td class="text-center"><img class="avatat avatar-md bradius me-2" src="Imgs/produtos/BH0070.jpg" alt="img" /></td>
+                    <!--Nome do Produto--><td class="td-top-produtos">Vaso de Vidro Transparente Verde 15cm x 15cm x 20cm</td>
+                     <!--Quantidade--><td class="td-top-produtos">
+                      
+                              <!--Input Ascrescer e Diminuir-->
+                              <div class="input-group w-60 w-sm-60 mx-auto">
+                                <span class="input-group-btn">
+                                  <!--botão add -->
+                                    <button type="button" class="minus btn btn-white btn-number">
+                                        <i class="fa fa-minus text-muted"></i>
+                                    </button>
+                                </span>
+                                
+                                <input type="text" name="quantity" class="form-control text-center qty no-border" value="2">
+                                <span class="input-group-btn">
+                                  <!--botão sub -->
+                                    <button type="button" class="quantity-right-plus btn btn-white btn-number add">
+                                        <i class="fa fa-plus text-muted"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                      </td>
+                    <!--Valor do Produto--><td class="td-top-produtos"><span class="">R$ 37,28</span></td>
+                    <!--SubTotal--><td class="td-top-produtos">R$ 74,56</td>
+                    <!--Impostos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Descontos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Total--><td class="td-top-produtos font-extra-bold">R$ 74,56</td>
+                    <!--Ação--><td class="td-top-produtos text-center">
+                                  <a class="btn text-danger bg-danger-transparent btn-icon py-1" data-toggle="tooltip" data-placement="top" title="Deletar Item"><span class="fa fa-trash-o"></span></a>
+                               </td>
+                  </tr>
+
+                  <!-- Linha 3 -->
+                  <tr>
+                    <!--Item--><td class="text-center td-top-produtos">BH0118</td>
+                    <!--Produto--><td class="text-center"><img class="avatat avatar-md bradius me-2" src="Imgs/produtos/BH0118.jpg" alt="img" /></td>
+                    <!--Nome do Produto--><td class="td-top-produtos">Vaso de Vidro Ambar</td>
+                     <!--Quantidade--><td class="td-top-produtos">
+                      
+                              <!--Input Ascrescer e Diminuir-->
+                              <div class="input-group w-60 w-sm-60 mx-auto">
+                                <span class="input-group-btn">
+                                  <!--botão add -->
+                                    <button type="button" class="minus btn btn-white btn-number">
+                                        <i class="fa fa-minus text-muted"></i>
+                                    </button>
+                                </span>
+                                
+                                <input type="text" name="quantity" class="form-control text-center qty no-border" value="2">
+                                <span class="input-group-btn">
+                                  <!--botão sub -->
+                                    <button type="button" class="quantity-right-plus btn btn-white btn-number add">
+                                        <i class="fa fa-plus text-muted"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                      </td>
+                    <!--Valor do Produto--><td class="td-top-produtos"><span class="">R$ 166,73</span></td>
+                    <!--SubTotal--><td class="td-top-produtos">R$ 333,46</td>
+                    <!--Impostos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Descontos--><td class="td-top-produtos">R$ 0,00</td>
+                    <!--Total--><td class="td-top-produtos font-extra-bold">R$ 333,46</td>
+                    <!--Ação--><td class="td-top-produtos text-center">
+                                  <a class="btn text-danger bg-danger-transparent btn-icon py-1" data-toggle="tooltip" data-placement="top" title="Deletar Item"><span class="fa fa-trash-o"></span></a>
+                               </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!-- Cards de pagamento, desconto e Orçamento -->
+<div class="row">
+
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xl-4">
+      <div class="card custom-card">
+          <div class="card-header">
+              <h4 class="card-title up-font">Transportadora</h4>
+          </div>
+          <div class="card-body">
+            <div class="col-sm-10">
+              <h3>Transportadora Padrão - <small>CNJP: <span id="cnpj_transportadora">01.743.404/0001-38</span></small></h3>
+              <p>CNJP: <span id="cnpj_transportadora">01.743.404/0001-38</span></p>
+              <p>Telefone: <span id="telefone_transportadora">(ddd) 1234-5678</span></p>
+              <div class="i-checks"><label> <input type="radio" value="CIF" name="transportadora"> <i></i> CIF </label></div>
+              <div class="i-checks"><label> <input type="radio" checked="" value="FOB" name="transportadora"> <i></i> FOB </label></div>
+              
+          </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="col-lg-6 col-md-12 col-sm-12 col-xl-8">
+      <div class="card custom-card">
+          <div class="card-header">
+              <h4 class="card-title up-font">Observações</h4>
+          </div>
+          <div class="card-body">
+            <p class="font-bold">
+              Insira abaixo algumas observações sobre esse orçamemnto e cliente em salvar para finalizar.
+          </p>
+          
+          <div class="chat-form">
+            <form role="form">
+                <div class="form-group">
+                    <textarea class="form-control" placeholder="Observações" rows="3"></textarea>
+                </div>
+                <div class="text-right mt-2">
+                    <button type="submit" class="btn btn-sm btn-primary">Salvar Observação</button>
+                </div>
+            </form>
+        </div>
+
+
+          </div>
+      </div>
+  </div>
+
+
+</div><!-- Fim  Cards de pagamento, desconto e Orçamento-->
+
+
+</div><!-- End wrapper wrapper-content -->
+
+<!-- Footer -->
+            <div class="footer">
+    <div class="float-right">
+       Sistema de Vendas
+    </div>
+    <div>
+        <strong>Copyright</strong> CCPSytem &copy; 2000 - 2020
+    </div>
+</div>
+
+
+</div><!-- End page wrapper-->
+
+</div><!-- End wrapper-->
+
+<!-- Main Scripts -->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/Popper/popper.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../lib/metisMenu/dist/jquery.metisMenu.js"></script>
+<script src="../lib/pace/pace.min.js"></script>
+<script src="../lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/site.js"></script>    
+
+<!-- Others Scripts -->
+<script src="../lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="../https://cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script src="../js/ej.culture.pt-BR.min.js"></script>
+
+
+<!--Data Tables-->
+<script src="../js/plugins/dataTables/datatables.min.js"></script>
+<script src="../js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page-Level Scripts - DataTable -->
+<script>
+  $(document).ready(function(){
+      $('.dataTables').DataTable({
+          pageLength: 25,
+          responsive: true,
+          
+      });
+
+  });
+
+  //revomento class "container-fluid"
+  $.extend( $.fn.DataTable.ext.classes, {
+  sWrapper: "dataTables_wrapper dt-bootstrap4",
+} );
+
+</script>
+
+<!-- Scritp Acionar e Remover ao carrinho-->
+<script>
+  $('.add').on('click', function () {
+  var $qty = $(this).closest('div').find('.qty');
+  var currentVal = parseInt($qty.val());
+  if (!isNaN(currentVal)) {
+  $qty.val(currentVal + 1);
+  }
+  });
+  $('.minus').on('click', function () {
+  var $qty = $(this).closest('div').find('.qty');
+  var currentVal = parseInt($qty.val());
+  if (!isNaN(currentVal) && currentVal > 0) {
+  $qty.val(currentVal - 1);
+  }
+  });
+</script>
+
+<!-- tooltip-->
+<script>
+  // Tooltips
+  $('.table').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+  });
+  </script>
+
+<!--auto complete-->
+<script src="../js/plugins/typehead/bootstrap3-typeahead.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+      $('.typeahead_1').typeahead({
+          source: ["20%","30%","40%"]
+      });
+
+      $.get('../js/api/typehead_collection.json', function(data){
+          $(".typeahead_2").typeahead({ source:data.ordens });
+      },'json');
+
+      $('.typeahead_3').typeahead({
+          source: [
+              {"name": "A vista", "code": "Vista", "ccn0": "040"},
+              {"name": "Parcelado em 2x", "code": "2x", "ccn0": "050"},
+              {"name": "Parcelado em 3x", "code": "3x","ccn0": "060"},
+              {"name": "Parcelado em 4x", "code": "4x","ccn0": "070"}
+          ]
+      });
+
+
+  });
+</script>
+
+ <!--Script que eu nao sei mas nao quis apagar --> 
+<script>
+
+        document.getElementById('btnexportapdf').onclick = function () {
+            var gridObj = document.getElementById("Grid").ej2_instances[0];
+            gridObj.showSpinner();
+            gridObj.pdfExport();
+
+        }
+
+        document.getElementById('btnexportaexcel').onclick = function () {
+            var gridObj = document.getElementById("Grid").ej2_instances[0];
+            gridObj.showSpinner();
+            gridObj.excelExport();
+        }
+
+        document.getElementById('btnprint').onclick = function () {
+            document.getElementById('Grid').ej2_instances[0].print();
+        }
+
+        function pdfExportComplete(args) {
+            this.hideSpinner();
+        }
+
+        function excelExportComplete(args) {
+            this.hideSpinner();
+        }
+    </script>
+
+    <script>new ejs.grids.Grid({
+  "allowExcelExport": true,
+  "allowFiltering": true,
+  "allowGrouping": true,
+  "allowPaging": true,
+  "allowPdfExport": true,
+  "allowSorting": true,
+  "columns": [
+    {
+      "field": "Referencia",
+      "headerText": "Codigo",
+      "width": "80"
+    },
+    {
+      "field": "Descricao",
+      "headerText": "Descrição",
+      "width": "180"
+    },
+    {
+      "field": "categoria",
+      "headerText": "Categoria",
+      "width": "90"
+    },
+    {
+      "field": "Venda",
+      "format": "N2",
+      "headerText": "Total Vendas",
+      "textAlign": "Right",
+      "width": "80"
+    },
+    {
+      "field": "Estoque",
+      "format": "N0",
+      "headerText": "Total Produtos",
+      "textAlign": "Right",
+      "width": "80"
+    },
+    {
+      "field": "TicketMedio",
+      "format": "N2",
+      "headerText": "Ticket Médio",
+      "textAlign": "Right",
+      "width": "80"
+    }
+  ],
+  "dataSource": ejs.data.DataUtil.parse.isJson([]),
+  "frozenColumns": 0.0,
+  "frozenRows": 0.0,
+  "locale": "pt",
+  "pageSettings": {
+    "currentPage": 1.0,
+    "pageCount": 8.0,
+    "pageSize": 30.0
+  },
+  "selectedRowIndex": -1.0,
+  "excelExportComplete": excelExportComplete,
+  "pdfExportComplete": pdfExportComplete
+}).appendTo("#Grid"); 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,972 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat&#xE1;logo Virtual | Venduus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#513693">
+
+    <!-- Add local styles, mostly for plugins css file -->
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/animate.css" />
+    <link rel="stylesheet" href="../css/style.css" /> 
+    
+    <!-- Favicon | Icon Site -->
+    <link rel="icon" href="../Images/icon/favicon_venduus-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../Images/icon/favicon_venduus-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../Images/icon/favicon_venduus-32x32.png" />
+
+</head>
+<body>
+
+
+<!-- Wrapper-->
+<div id="wrapper" class="Catalogo_Grid">
+
+<!-- Navigation -->    
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a href="../index.html">
+                        <img alt="image" width="130" height="70" src="../Images/venduus-vertical-branco-so-fonte.png" />
+                    </a>
+                    
+                </div>
+                <div class="logo-element">
+                  <img alt="image" width="45" height="25" src="../Images/venduus-vertical-branco-so-fonte.png" />
+              </div>
+            </li>
+  
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label" data-i18n="nav.graphs">Dashboard</span><span class="fa arrow"></span></a>
+  
+                    <ul class="nav nav-second-level">
+                        <li class=""><a href="../index.html">Principal</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-users"></i><span class="nav-label" data-i18n="nav.graphs">Clientes</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                      <li class="active"><a href="../Clientes/Clientes.html">Lista de Clientes</a></li>
+                        <li class=""><a href="../Clientes/Cadastro.html">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-money"></i><span class="nav-label" data-i18n="nav.graphs">Cobrança</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="../Cobranca/Cobranca.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-file-text"></i><span class="nav-label" data-i18n="nav.graphs">Notas Fiscais</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../NotasFiscais/NotasFiscais.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-pencil-square-o"></i><span class="nav-label" data-i18n="nav.graphs">Orçamentos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="../Orcamento/Orcamentos.html">Entrada</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-list-alt"></i><span class="nav-label" data-i18n="nav.graphs">Pedidos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Pedidos/Pedidos.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-tags"></i><span class="nav-label" data-i18n="nav.graphs">Produtos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in">
+                        <li class="active"><a href="../Produtos/Catalogo_Grid.html">Catálogo Virtual</a></li>
+                        <li class=""><a href="../Produtos/Catalogo_Galeria.html">Catálogo Galeria</a></li>
+  
+                    </ul>
+                
+                <li class="">
+                    <a href="#"><i class="fa fa-briefcase"></i><span class="nav-label" data-i18n="nav.graphs">Representante</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Representantes/Representantes.html">Consulta</a></li>
+                    </ul>
+                </li>
+  
+  
+        </ul>
+    </div>
+  </nav>
+  <!-- Fim do Navigation -->  
+
+
+<!-- Page wraper -->
+<div id="page-wrapper" class="gray-bg">
+           
+<!-- Bloco de Acesso do Usuario -->           
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <!-- Frase de Apresentação do Usuario -->
+            <li>
+                <span class="welcome">Olá! Esse é seu painel, <a href="" class="user-name">Laura</a></span>
+            </li>
+            <!-- Dropdown de Orçamento -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                    <i class="fa fa-shopping-cart"></i><span id="qdtCarrinho" class="label label-warning">0</span>
+                </a>
+                <!-- Dropdown Vazio -->
+                <ul class="dropdown-menu dropdown-messages orcamento-drop">
+                    <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <h4 class="font-bold"> Nenhum Orçamento iniciado!</h4>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+
+                <!-- Esse é um Dropdown com um orçamento dentro do carrinho -->
+                <!-- Para visualuzar, retire esse parte de dentro do comentário -->
+                
+                <!--
+                <ul class="dropdown-menu dropdown-messages orcamento-drop show">
+                  <li>
+                          <div class="dropdown-messages-box">
+                              <div class="media-body">
+                                <h4 class="font-bold"> ALUA PRESENTES E ADORNOS LTDA</h4>
+                                <div class="dropdown-divider"></div>
+                              </div>
+                          </div>
+                          <div class="dropdown-messages-box d-flex">
+                              <a rel="nofollow" href="/Orcamentos/Carrinho/21949" class="btn btn-sm btn-primary pt-1">
+                                  <i class="fa fa-check-circle-o"></i> Checkout
+                              </a>
+                              <div class="card-options mr-0">
+                              <h3 class="total_valor_drop_check">
+                              Total: <span id="totalCarrinho2">R$ 106,31</span>
+                            </h3>
+                          </div>
+                          </div>
+                  </li>
+              </ul>-->
+
+            </li>
+            <!-- User Profile -->
+            <li>
+                <div class="dropdown main-profile-menu">
+                    <a data-toggle="dropdown" class="" href="">
+                        <span class="main-img-user">
+                            <!--Foto do usuario -->
+                            <img alt="avatar" src="../Images/user/perfil_foto.jpg"></span>
+                        </a>
+                        <ul class="dropdown-menu user-drop animated fadeInRight m-t-xs">
+                          <div class="drop-heading">
+                            <div class="text-center">
+                                <!-- Nome do usuario-->
+                              <h5 class="dropdown-name">Laura Sobrenome</h5>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle-o"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o"></i> Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Suporte</a></li>
+                            <li><a class="dropdown-item" href="/Login/LogOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+                </div>
+
+
+            </li>
+             <!-- Fim User Profile -->
+        </ul>
+    </nav>        
+</div>
+<!-- Fim do Bloco de Acesso do Usuario -->
+
+<!-- Main view  -->
+<!--Titulo da Pagina-->
+<div class="page-header">
+    <h1 class="page-title mb-0">Catálogo Virtual</h1>
+</div>
+
+<!-- Categoria e Busca-->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div class="row justify-content-between">
+                    <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 pb-1 pt-1">
+                        <input id="categoria" class="input-categoria form-control">
+
+                    </div>
+
+
+                    <div class="col-xl-6 col-lg-12 pb-1 pt-1">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Digite o nome ou a descrição" id="busca" name="busca">
+                                <span class="input-group-append">
+                                    <button type="submit" id="btnpesquisa" onclick="displayBusyIndicator()" class="btn btn-primary"><i class="fa fa-search"></i> <span class="hide-to-mobile">Pesquisar</span></button>
+                                </span>
+                        </div>
+                    </div>
+
+                </div><!--row-->
+
+            </div><!--card-body-->
+
+        </div><!--card-->
+
+    </div><!--col-12-->
+
+</div><!-- row -->
+<!-- Fim da Categoria e Busca-->
+
+<!-- Loading-->
+<div class="sk-spinner sk-spinner-wave" style="display: none;" role="status" id="loading">
+        <div class="sk-rect1"></div>
+        <div class="sk-rect2"></div>
+        <div class="sk-rect3"></div>
+        <div class="sk-rect4"></div>
+        <div class="sk-rect5"></div>
+        <span class="sr-only">Carregando...</span>
+</div>
+<!-- Fim do Loading-->
+
+<!-- Display Produtos Wrapper-->
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row">
+        <!--produto-->
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content product-box b-radius-px11">
+                    <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                    <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                    <img src="imgs/Estante_Line_Louro-Freijo.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                    </a>
+                    <!--Texto do Produto-->
+                    <div class="product-desc">
+                        <div class="row">
+                            <div class="col-9">
+                                <!--Categoria do Produto-->
+                                <span class="text-muted categoria-produto">Moveis</span>
+                                <!-- Nome do Produto-->
+                                <a href="Detalhes.html" class="product-name"> Estante Line Louro Freijó</a>
+                            </div><!--col-9-->
+                            <div class="col-3 p-0">
+                                <div class="card-new-price">
+                                    <!-- Novos Preços-->
+                                    <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                    <span class="new-price-discount">de R$ 329,99</span>
+                                    <span class="new-price"><small>R$</small> 259,99  </span>
+                                </div>
+                            </div><!--col-3-->
+                        </div><!--row-->
+
+                        <!--Disponibilidade-->
+                       <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">10 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                        
+                        <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                        <div class="product-desc-text">
+                            Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                        </div>
+                        <!--Botões de Carrinho e Checkout-->
+                        <div class="row mt-3">
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                            <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                            </div>
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                            <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--produto-->
+
+       <!--produto-->
+       <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                <img src="imgs/Luminaria_usb_de_led.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Iluminação</span>
+                            <!-- Nome do Produto-->
+                            <a href="Detalhes.html" class="product-name">Luminária USB de LED</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">de R$ 59,99</span>
+                                <span class="new-price"><small>R$</small> 29,99</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                    <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">120 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+
+    <!--produto-->
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content product-box b-radius-px11">
+                    <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                    <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                    <img src="imgs/cadeira_pool_pretal.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                    </a>
+                    <!--Texto do Produto-->
+                    <div class="product-desc">
+                        <div class="row">
+                            <div class="col-9">
+                                <!--Categoria do Produto-->
+                                <span class="text-muted categoria-produto">Movéis</span>
+                                <!-- Nome do Produto-->
+                                <a href="Detalhes.html" class="product-name">Cadeira Pool Preta</a>
+                            </div><!--col-9-->
+                            <div class="col-3 p-0">
+                                <div class="card-new-price">
+                                    <!-- Novos Preços-->
+                                    <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                    <span class="new-price-discount">de R$ 999,99</span>
+                                    <span class="new-price"><small>R$</small> 529,99</span>
+                                </div>
+                            </div><!--col-3-->
+                        </div><!--row-->
+
+                        <!--Disponibilidade-->
+                       <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">18 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                        
+                        <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                        <div class="product-desc-text">
+                            Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                        </div>
+                        <!--Botões de Carrinho e Checkout-->
+                        <div class="row mt-3">
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                            <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                            </div>
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                            <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--produto-->
+
+       <!--produto-->
+       <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                <img src="imgs/Mesa_de_Centro_Campos_Natural.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Móveis</span>
+                            <!-- Nome do Produto-->
+                            <a href="Detalhes.html" class="product-name">Mesa de Centro Campos</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">R$ 899,00</span>
+                                <span class="new-price"><small>R$</small> 539,99</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                    <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-danger">Fora de Estoque</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+        
+    </div><!--row produtos-->
+
+    <div class="row">
+        <!--produto-->
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content product-box b-radius-px11">
+                    <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                    <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                    <img src="imgs/Abajur_de_led.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                    </a>
+                    <!--Texto do Produto-->
+                    <div class="product-desc">
+                        <div class="row">
+                            <div class="col-9">
+                                <!--Categoria do Produto-->
+                                <span class="text-muted categoria-produto">Iluminação</span>
+                                <!-- Nome do Produto-->
+                                <a href="Detalhes.html" class="product-name">Abajur de LED</a>
+                            </div><!--col-9-->
+                            <div class="col-3 p-0">
+                                <div class="card-new-price">
+                                    <!-- Novos Preços-->
+                                    <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                    <span class="new-price-discount">de R$ 79,99</span>
+                                    <span class="new-price"><small>R$</small> 29,99</span>
+                                </div>
+                            </div><!--col-3-->
+                        </div><!--row-->
+
+                        <!--Disponibilidade-->
+                       <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">25 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                        
+                        <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                        <div class="product-desc-text">
+                            Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                        </div>
+                        <!--Botões de Carrinho e Checkout-->
+                        <div class="row mt-3">
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                            <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                            </div>
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                            <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--produto-->
+
+       <!--produto-->
+       <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                <img src="imgs/Jogo_de_Colcha_Queen.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Jogo de Cama</span>
+                            <!-- Nome do Produto-->
+                            <a href="Detalhes.html" class="product-name">Jogo de Colcha Queen</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">de R$ 514,99</span>
+                                <span class="new-price"><small>R$</small> 355,90</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                    <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">145 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+
+    <!--produto-->
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content product-box b-radius-px11">
+                    <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                    <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                    <img src="imgs/Mesa_de_Centro_Unique.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                    </a>
+                    <!--Texto do Produto-->
+                    <div class="product-desc">
+                        <div class="row">
+                            <div class="col-9">
+                                <!--Categoria do Produto-->
+                                <span class="text-muted categoria-produto">Moveis</span>
+                                <!-- Nome do Produto-->
+                                <a href="Detalhes.html" class="product-name">Mesa de Centro Unique</a>
+                            </div><!--col-9-->
+                            <div class="col-3 p-0">
+                                <div class="card-new-price">
+                                    <!-- Novos Preços-->
+                                    <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                    <span class="new-price-discount">de R$ 449,90</span>
+                                    <span class="new-price"><small>R$</small> 299,99</span>
+                                </div>
+                            </div><!--col-3-->
+                        </div><!--row-->
+
+                        <!--Disponibilidade-->
+                       <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">85 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                        
+                        <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                        <div class="product-desc-text">
+                            Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                        </div>
+                        <!--Botões de Carrinho e Checkout-->
+                        <div class="row mt-3">
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                            <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                            </div>
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                            <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--produto-->
+
+       <!--produto-->
+       <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                <img src="imgs/espremedor_de_frutas.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Eletrodomesticos</span>
+                            <!-- Nome do Produto-->
+                            <a href="Detalhes.html" class="product-name">Espremedor de Frutas</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">R$ 482,00</span>
+                                <span class="new-price"><small>R$</small> 360,00</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                    <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">02 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+        
+    </div><!--row produtos-->
+
+    <div class="row">
+        <!--produto-->
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content product-box b-radius-px11">
+                    <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                    <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                    <img src="imgs/Vela-Victoria-Branca.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                    </a>
+                    <!--Texto do Produto-->
+                    <div class="product-desc">
+                        <div class="row">
+                            <div class="col-9">
+                                <!--Categoria do Produto-->
+                                <span class="text-muted categoria-produto">Decoração</span>
+                                <!-- Nome do Produto-->
+                                <a href="Detalhes.html" class="product-name">Vela Victoria Branca</a>
+                            </div><!--col-9-->
+                            <div class="col-3 p-0">
+                                <div class="card-new-price">
+                                    <!-- Novos Preços-->
+                                    <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                    <span class="new-price-discount">de R$ 19,99</span>
+                                    <span class="new-price"><small>R$</small> 9,99</span>
+                                </div>
+                            </div><!--col-3-->
+                        </div><!--row-->
+                        
+                       <!--Disponibilidade-->
+                       <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">295 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+
+                        <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                        <div class="product-desc-text">
+                            Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                        </div>
+                        <!--Botões de Carrinho e Checkout-->
+                        <div class="row mt-3">
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                            <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                            </div>
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                            <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--produto-->
+
+       <!--produto-->
+       <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                <img src="imgs/Cafeteira-Eletrica-Cadence.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Eletrodomesticos</span>
+                            <!-- Nome do Produto-->
+                            <a href="Detalhes.html" class="product-name">Cafeteira Elétrica Cadence</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">de R$ 307,00</span>
+                                <span class="new-price"><small>R$</small> 230,90</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                    <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">08 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+
+    <!--produto-->
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content product-box b-radius-px11">
+                    <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                    <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                    <img src="imgs/arvore-Ceramica-Dourado.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                    </a>
+                    <!--Texto do Produto-->
+                    <div class="product-desc">
+                        <div class="row">
+                            <div class="col-9">
+                                <!--Categoria do Produto-->
+                                <span class="text-muted categoria-produto">Decoração</span>
+                                <!-- Nome do Produto-->
+                                <a href="Detalhes.html" class="product-name">Árvore Cerâmica Dourado</a>
+                            </div><!--col-9-->
+                            <div class="col-3 p-0">
+                                <div class="card-new-price">
+                                    <!-- Novos Preços-->
+                                    <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                    <span class="new-price-discount">de R$ 138,00</span>
+                                    <span class="new-price"><small>R$</small> 73,90</span>
+                                </div>
+                            </div><!--col-3-->
+                        </div><!--row-->
+
+                        <!--Disponibilidade-->
+                       <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-success">18 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                        
+                        <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                        <div class="product-desc-text">
+                            Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                        </div>
+                        <!--Botões de Carrinho e Checkout-->
+                        <div class="row mt-3">
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                            <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                            </div>
+                            <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                            <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--produto-->
+
+       <!--produto-->
+       <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="Detalhes.html"><!--Link do produto também na imagem-->
+                <img src="imgs/Cachepo-Com-Suporte-Metal.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Decoração</span>
+                            <!-- Nome do Produto-->
+                            <a href="Detalhes.html" class="product-name">Cachepô Suporte Metal</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">R$ 1.314,00</span>
+                                <span class="new-price"><small>R$</small> 985,90</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                    <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-danger">Fora de Estoque</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="Detalhes.html" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+        
+    </div><!--row produtos-->
+
+<!-- Paginação -->
+
+<div class="mb-5 d-flex justify-content-end">
+        <a class="btn btn-white disabled" href="/Produtos/Catalogo_Grid?busca=a&amp;pageNumber=0"><i class="fa fa-angle-left"></i> Anterior</a>
+        <a class="btn btn-primary" href="/Produtos/Catalogo_Grid?busca=a&amp;pageNumber=2"><i class="fa fa-angle-right"></i> Próxima </a>
+</div>
+
+</div><!-- End Display Produtos Wrapper-->
+
+
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="float-right">
+       Sistema de Vendas
+    </div>
+    <div>
+        <strong>Copyright</strong> CCPSytem &copy; 2000 - 2020
+    </div>
+</div>
+
+
+</div> <!-- End page wrapper-->
+
+</div><!-- End wrapper-->
+
+<!-- Main Scripts -->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/Popper/popper.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../lib/metisMenu/dist/jquery.metisMenu.js"></script>
+<script src="../lib/pace/pace.min.js"></script>
+<script src="../lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/site.js"></script>    
+
+<!-- Others Scripts -->
+<script src="../lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="../https://cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script src="../js/ej.culture.pt-BR.min.js"></script>
+ 
+<script>
+        function valueChange() {
+
+            $("#catgrid").submit();
+
+        }
+
+    </script>
+
+<script>new ejs.dropdowns.DropDownTree({
+  "changeOnBlur": false,
+  "fields": {
+    "dataSource": ejs.data.DataUtil.parse.isJson([
+  {
+    "nodeId": "",
+    "nodeText": "",
+    "icon": null,
+    "expanded": false,
+    "selected": false,
+    "child": [
+      {
+        "nodeId": "_",
+        "nodeText": "",
+        "icon": null,
+        "expanded": false,
+        "selected": false
+      }
+    ]
+  }
+]),
+    "hasChildren": "hasChild",
+    "parentValue": "pid",
+    "text": "nodeText",
+    "value": "nodeId"
+  },
+  "ignoreAccent": false,
+  "mode": "Default",
+  "placeholder": "Selecione a Categoria",
+  "popupHeight": "auto",
+  "popupWidth": "100%",
+  "width": "100%",
+  "zIndex": 1000.0,
+  "change": valueChange
+}).appendTo("#categoria"); 
+</script>
+
+<!--Limite de descrição -->
+<script>
+var leiamais_limit = 130;
+
+$('.product-desc-text').each(function() {
+  var html = $(this).html();
+  if (html.length > leiamais_limit) $(this).html(html.substring(0, leiamais_limit) + '...');
+}).on('click', '.leiamais-btn', function() {
+  $(this).hide().siblings('.leiamais-tail').show();
+});
+</script>
+
+</body>
+</html>

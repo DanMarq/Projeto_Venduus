@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Representantes | Venduus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#513693">
+
+     <!-- Add local styles, mostly for plugins css file -->
+     <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+     <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css" />
+     <link rel="stylesheet" href="../css/animate.css" />
+     <link rel="stylesheet" href="../css/style.css" />
+
+     <!--Data Tabel-->
+     <link rel="stylesheet" href="../css/plugins/dataTables/datatables.min.css">
+
+    <!-- Favicon | Icon Site -->
+    <link rel="icon" href="../Images/icon/favicon_venduus-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../Images/icon/favicon_venduus-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../Images/icon/favicon_venduus-32x32.png" />
+
+</head>
+<body>
+
+
+<!-- Wrapper-->
+<div id="wrapper" class="Catalogo_Grid">
+
+<!-- Navigation -->    
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a href="../index.html">
+                        <img alt="image" width="130" height="70" src="../Images/venduus-vertical-branco-so-fonte.png" />
+                    </a>
+                    
+                </div>
+                <div class="logo-element">
+                  <img alt="image" width="45" height="25" src="../Images/venduus-vertical-branco-so-fonte.png" />
+              </div>
+            </li>
+  
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label" data-i18n="nav.graphs">Dashboard</span><span class="fa arrow"></span></a>
+  
+                    <ul class="nav nav-second-level">
+                        <li class=""><a href="../index.html">Principal</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-users"></i><span class="nav-label" data-i18n="nav.graphs">Clientes</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                      <li class="active"><a href="../Clientes/Clientes.html">Lista de Clientes</a></li>
+                        <li class=""><a href="../Clientes/Cadastro.html">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-money"></i><span class="nav-label" data-i18n="nav.graphs">Cobrança</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="../Cobranca/Cobranca.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-file-text"></i><span class="nav-label" data-i18n="nav.graphs">Notas Fiscais</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../NotasFiscais/NotasFiscais.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-pencil-square-o"></i><span class="nav-label" data-i18n="nav.graphs">Orçamentos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="../Orcamento/Orcamentos.html">Entrada</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-list-alt"></i><span class="nav-label" data-i18n="nav.graphs">Pedidos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Pedidos/Pedidos.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-tags"></i><span class="nav-label" data-i18n="nav.graphs">Produtos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="../Produtos/Catalogo_Grid.html">Catálogo Virtual</a></li>
+                        <li class=""><a href="../Produtos/Catalogo_Galeria.html">Catálogo Galeria</a></li>
+  
+                    </ul>
+                
+                <li class="active">
+                    <a href="#"><i class="fa fa-briefcase"></i><span class="nav-label" data-i18n="nav.graphs">Representante</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in">
+                        <li class="active"><a href="../Representantes/Representantes.html">Consulta</a></li>
+                    </ul>
+                </li>
+  
+        </ul>
+    </div>
+  </nav>
+  <!-- Fim do Navigation -->  
+
+
+<!-- Page wraper -->
+<div id="page-wrapper" class="gray-bg">
+           
+    <!-- Bloco de Acesso do Usuario -->           
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <!-- Frase de Apresentação do Usuario -->
+            <li>
+                <span class="welcome">Olá! Esse é seu painel, <a href="" class="user-name">Laura</a></span>
+            </li>
+            <!-- Dropdown de Orçamento -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                    <i class="fa fa-shopping-cart"></i><span id="qdtCarrinho" class="label label-warning">0</span>
+                </a>
+                <!-- Dropdown Vazio -->
+                <ul class="dropdown-menu dropdown-messages orcamento-drop">
+                    <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <h4 class="font-bold"> Nenhum Orçamento iniciado!</h4>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+
+                <!-- Esse é um Dropdown com um orçamento dentro do carrinho -->
+                <!-- Para visualuzar, retire esse parte de dentro do comentário -->
+                
+                <!--
+                <ul class="dropdown-menu dropdown-messages orcamento-drop show">
+                  <li>
+                          <div class="dropdown-messages-box">
+                              <div class="media-body">
+                                <h4 class="font-bold"> ALUA PRESENTES E ADORNOS LTDA</h4>
+                                <div class="dropdown-divider"></div>
+                              </div>
+                          </div>
+                          <div class="dropdown-messages-box d-flex">
+                              <a rel="nofollow" href="/Orcamentos/Carrinho/21949" class="btn btn-sm btn-primary pt-1">
+                                  <i class="fa fa-check-circle-o"></i> Checkout
+                              </a>
+                              <div class="card-options mr-0">
+                              <h3 class="total_valor_drop_check">
+                              Total: <span id="totalCarrinho2">R$ 106,31</span>
+                            </h3>
+                          </div>
+                          </div>
+                  </li>
+              </ul>-->
+
+            </li>
+            <!-- User Profile -->
+            <li>
+                <div class="dropdown main-profile-menu">
+                    <a data-toggle="dropdown" class="" href="">
+                        <span class="main-img-user">
+                            <!--Foto do usuario -->
+                            <img alt="avatar" src="../Images/user/perfil_foto.jpg"></span>
+                        </a>
+                        <ul class="dropdown-menu user-drop animated fadeInRight m-t-xs">
+                          <div class="drop-heading">
+                            <div class="text-center">
+                                <!-- Nome do usuario-->
+                              <h5 class="dropdown-name">Laura Sobrenome</h5>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle-o"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o"></i> Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Suporte</a></li>
+                            <li><a class="dropdown-item" href="/Login/LogOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+                </div>
+
+
+            </li>
+             <!-- Fim User Profile -->
+        </ul>
+    </nav>        
+</div>
+<!-- Fim do Bloco de Acesso do Usuario -->
+    
+<!-- Main view  -->
+<div class="wrapper wrapper-content">
+<!--Titulo da Pagina-->
+<div class="page-header">
+    <h1 class="page-title mb-0 mb-sm-3">Representantes</h1>
+    <!-- Incluso caso tenha botão do lado direito do titulo da página-->
+    <div class="d-flex">
+        <div class="justify-content-center">
+            <a href="" id="" type="button" class="btn btn-primary"> <i class="fa fa-plus mr-2"></i> Adcionar Novo</a>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Loading-->
+<div class="sk-spinner sk-spinner-wave" style="display: none;" role="status" id="loading">
+    <div class="sk-rect1"></div>
+    <div class="sk-rect2"></div>
+    <div class="sk-rect3"></div>
+    <div class="sk-rect4"></div>
+    <div class="sk-rect5"></div>
+    <span class="sr-only">Carregando...</span>
+</div>
+<!-- Fim do Loading-->
+
+<div class="row">
+    <!--Tabela de Representantes-->
+
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+        <div class="card custom-card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover dataTables-representante table-bordered">
+                 <!-- Titulos Tabela--> 
+                <thead>
+                  <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Cidade</th>
+                    <th>UF</th>
+                    <th>DDD</th>
+                    <th>Telefone</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                <!-- Linha 1 -->
+                <tr data-href="Detalhes.html" data-toggle="tooltip" data-placement="top" title="Clique para exibir">
+                    <!--codigo--><td>353</td>
+                    <!--Nome--><td>ACADEMIA DE VENDAS APOIO ADMINISTRATIVO EIRELI ME</td>
+                    <!--Cidade--> <td>SAO PAULO</td>
+                    <!--UF--><td>SP</td>
+                    <!--DDD--><td>11</td>
+                    <!--Telefone--><td>7751-2048</td>
+                  </tr>
+
+                  <!-- Linha 2 -->
+                  <tr data-href="Detalhes.html" data-toggle="tooltip" data-placement="top" title="Clique para exibir">
+                    <!--codigo--><td>2</td>
+                    <!--Nome--><td>ACADEMIA DE VENDAS APOIO ADMINISTRATIVO EIRELI ME</td>
+                    <!--Cidade--> <td>FLORIANOPOLIS</td>
+                    <!--UF--><td>SC</td>
+                    <!--DDD--><td>48</td>
+                    <!--Telefone--><td>9112-1951</td>
+                  </tr>
+
+                   <!-- Linha 3 -->
+                   <tr data-href="Detalhes.html" data-toggle="tooltip" data-placement="top" title="Clique para exibir">
+                    <!--codigo--><td>2758</td>
+                    <!--Nome--><td>AFN COMERCIO E REPRESENTACOES LTDA</td>
+                    <!--Cidade--> <td>VITORIA</td>
+                    <!--UF--><td>ES</td>
+                    <!--DDD--><td>27</td>
+                    <!--Telefone--><td>32272113</td>
+                  </tr>
+                                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+</div><!-- End wrapper wrapper-content -->
+
+
+
+
+
+<!-- Footer -->
+            <div class="footer">
+    <div class="float-right">
+       Sistema de Vendas
+    </div>
+    <div>
+        <strong>Copyright</strong> CCPSytem &copy; 2000 - 2020
+    </div>
+</div>
+
+
+</div><!-- End page wrapper-->
+
+</div><!-- End wrapper-->
+
+<!-- Main Scripts -->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/Popper/popper.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../lib/metisMenu/dist/jquery.metisMenu.js"></script>
+<script src="../lib/pace/pace.min.js"></script>
+<script src="../lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/site.js"></script>  
+
+
+<!-- Others Scripts -->
+<script src="../lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="../https://cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script src="../js/ej.culture.pt-BR.min.js"></script>
+
+<!--Data Tables-->
+<script src="../js/plugins/dataTables/datatables.min.js"></script>
+<script src="../js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+<!-- Page-Level Scripts - DataTable -->
+<script>
+    $(document).ready(function(){
+        $('.dataTables-representante').DataTable({
+            pageLength: 25,
+            responsive: true,
+            dom: '<"html5buttons"B>lTfgitp',
+            buttons: [
+                { extend: 'copy'},
+                {extend: 'csv'},
+                {extend: 'excel', title: 'ExampleFile'},
+                {extend: 'pdf', title: 'ExampleFile'},
+
+                {extend: 'print',
+                 customize: function (win){
+                        $(win.document.body).addClass('white-bg');
+                        $(win.document.body).css('font-size', '10px');
+
+                        $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                }
+                }
+            ]
+
+        });
+
+    });
+    
+    //revomento class "container-fluid"
+    $.extend( $.fn.DataTable.ext.classes, {
+  sWrapper: "dataTables_wrapper dt-bootstrap4",
+} );
+</script>
+
+<!-- Linha da Tabela Clivavel-->
+<script>
+    jQuery(document).ready(function($) {
+    $('*[data-href]').on('click', function() {
+        window.location = $(this).data("href");
+    });
+});
+</script>
+
+<!-- Linha da Tabela Clivavel-->
+<script>
+
+// Tooltips
+$('.table').tooltip({
+    selector: "[data-toggle=tooltip]",
+    container: "body"
+});
+</script>
+
+</body>
+</html>

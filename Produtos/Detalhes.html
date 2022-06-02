@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductDetail - Sistema de Vendas</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#513693">
+
+    <!-- Add local styles, mostly for plugins css file -->
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/animate.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Plugins -->
+    <link rel="stylesheet" href="../lib/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="../lib/slick-carousel/slick/slick-theme.css" />
+
+    <!-- Favicon | Icon Site -->
+    <link rel="icon" href="../Images/icon/favicon_venduus-32x32.png" sizes="32x32" />
+    <link rel="icon" href="../Images/icon/favicon_venduus-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../Images/icon/favicon_venduus-32x32.png" />
+
+</head>
+<body>
+
+
+ <!-- Wrapper-->
+ <div id="wrapper" class="Catalogo_Grid">
+
+<!-- Navigation -->    
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a href="../index.html">
+                        <img alt="image" width="130" height="70" src="../Images/venduus-vertical-branco-so-fonte.png" />
+                    </a>
+                    
+                </div>
+                <div class="logo-element">
+                  <img alt="image" width="45" height="25" src="../Images/venduus-vertical-branco-so-fonte.png" />
+              </div>
+            </li>
+  
+                <li class="">
+                    <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label" data-i18n="nav.graphs">Dashboard</span><span class="fa arrow"></span></a>
+  
+                    <ul class="nav nav-second-level">
+                        <li class=""><a href="../index.html">Principal</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-users"></i><span class="nav-label" data-i18n="nav.graphs">Clientes</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                      <li class="active"><a href="../Clientes/Clientes.html">Lista de Clientes</a></li>
+                        <li class=""><a href="../Clientes/Cadastro.html">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-money"></i><span class="nav-label" data-i18n="nav.graphs">Cobrança</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="../Cobranca/Cobranca.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-file-text"></i><span class="nav-label" data-i18n="nav.graphs">Notas Fiscais</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../NotasFiscais/NotasFiscais.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-pencil-square-o"></i><span class="nav-label" data-i18n="nav.graphs">Orçamentos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="../Orcamento/Orcamentos.html">Entrada</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-list-alt"></i><span class="nav-label" data-i18n="nav.graphs">Pedidos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Pedidos/Pedidos.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-tags"></i><span class="nav-label" data-i18n="nav.graphs">Produtos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in">
+                        <li class="active"><a href="../Produtos/Catalogo_Grid.html">Catálogo Virtual</a></li>
+                        <li class=""><a href="../Produtos/Catalogo_Galeria.html">Catálogo Galeria</a></li>
+  
+                    </ul>
+                
+                <li class="">
+                    <a href="#"><i class="fa fa-briefcase"></i><span class="nav-label" data-i18n="nav.graphs">Representante</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="../Representantes/Representantes.html">Consulta</a></li>
+                    </ul>
+                </li>
+  
+  
+                
+        </ul>
+    </div>
+  </nav>
+  <!-- Fim do Navigation -->  
+
+
+
+<!-- Page wraper -->
+ <div id="page-wrapper" class="gray-bg">
+            
+<!-- Bloco de Acesso do Usuario -->           
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <!-- Frase de Apresentação do Usuario -->
+            <li>
+                <span class="welcome">Olá! Esse é seu painel, <a href="" class="user-name">Laura</a></span>
+            </li>
+            <!-- Dropdown de Orçamento -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                    <i class="fa fa-shopping-cart"></i><span id="qdtCarrinho" class="label label-warning">0</span>
+                </a>
+                <!-- Dropdown Vazio -->
+                <ul class="dropdown-menu dropdown-messages orcamento-drop">
+                    <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <h4 class="font-bold"> Nenhum Orçamento iniciado!</h4>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+
+                <!-- Esse é um Dropdown com um orçamento dentro do carrinho -->
+                <!-- Para visualuzar, retire esse parte de dentro do comentário -->
+                
+                <!--
+                <ul class="dropdown-menu dropdown-messages orcamento-drop show">
+                  <li>
+                          <div class="dropdown-messages-box">
+                              <div class="media-body">
+                                <h4 class="font-bold"> ALUA PRESENTES E ADORNOS LTDA</h4>
+                                <div class="dropdown-divider"></div>
+                              </div>
+                          </div>
+                          <div class="dropdown-messages-box d-flex">
+                              <a rel="nofollow" href="/Orcamentos/Carrinho/21949" class="btn btn-sm btn-primary pt-1">
+                                  <i class="fa fa-check-circle-o"></i> Checkout
+                              </a>
+                              <div class="card-options mr-0">
+                              <h3 class="total_valor_drop_check">
+                              Total: <span id="totalCarrinho2">R$ 106,31</span>
+                            </h3>
+                          </div>
+                          </div>
+                  </li>
+              </ul>-->
+
+            </li>
+            <!-- User Profile -->
+            <li>
+                <div class="dropdown main-profile-menu">
+                    <a data-toggle="dropdown" class="" href="">
+                        <span class="main-img-user">
+                            <!--Foto do usuario -->
+                            <img alt="avatar" src="../Images/user/perfil_foto.jpg"></span>
+                        </a>
+                        <ul class="dropdown-menu user-drop animated fadeInRight m-t-xs">
+                          <div class="drop-heading">
+                            <div class="text-center">
+                                <!-- Nome do usuario-->
+                              <h5 class="dropdown-name">Laura Sobrenome</h5>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle-o"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o"></i> Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Suporte</a></li>
+                            <li><a class="dropdown-item" href="/Login/LogOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+                </div>
+
+
+            </li>
+             <!-- Fim User Profile -->
+        </ul>
+    </nav>        
+</div>
+<!-- Fim do Bloco de Acesso do Usuario -->
+
+<!-- Main view  -->
+<!--Titulo da Pagina-->
+<div class="page-header">
+    <h1 class="page-title mb-0">Detalhes do Produto</h1>
+</div>
+
+<!-- Display Produto Wrapper | No Padding Top -->
+<div class="wrapper wrapper-content animated fadeInRight pt-0">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <div class="row">
+                        <!--Imagens do Produtp-->
+                        <div class="col-xl-5 col-lg-12 col-md-12">
+
+                            <div class="product-images">
+
+                                <div>
+                                    <img src="imgs/galeria/Estante-Line-Louro-Freijo.jpg" class="w-100 img-fluid">
+                                </div> 
+
+                                
+                                <div>
+                                    <img src="imgs/galeria/Estante-Line-Louro-Freijo_02.jpg" class="w-100 img-fluid">
+                                </div> 
+
+                                    
+                                <div>
+                                    <img src="imgs/galeria/Estante-Line-Louro-Freijo_03.jpg" class="w-100 img-fluid">
+                                </div>
+
+                                <div>
+                                    <img src="imgs/galeria/Estante-Line-Louro-Freijo_04.jpg" class="w-100 img-fluid">
+                                </div>
+                                
+                            </div>
+
+                        </div><!--Fim da Imagem do Produto-->
+                        <!-- Detalhes do Produto-->
+                        <div class="details col-xl-7 col-lg-12 col-md-12 mt-4 mt-xl-0">
+                            <!-- Nome do Produto -->
+                            <h2 class="details-product-tittle mb-3">Abacaxi de Metal - Ouro velho</h2>
+                            <!--Descrição do Produto -->
+                            <h4 class="details-produt-description mt-4">Descriçãon</h4>
+                            <p class="details-product-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            <p class="details-product-text">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized .</p>
+                            <p class=""><a href="#espec-completa">Veja especificação completa</a></p>
+                            <!--Preço do Produto-->
+                            <h3 class="details-product-price mb-4">
+                                <!--Valor Atual -->
+                                <span class="me-2 fs-25">R$ 129,99 /</span>
+                                <!--Valor antigo caso tenha queda de preço-->
+                                <span class="details-price-discount fs-18 text-muted">R$ 159,99</span>
+                            </h3>
+                            <!--Itens-->
+                            <!--Categoria-->
+                            <div class="mt-2 mb-2">
+                                <span class="details-produt-item me-2">Categoria:</span>
+                                <span class="details-produt-value"><a href="">Móveis</a></span>
+                            </div>
+                            <!--Codigo-->
+                            <div class="mt-2 mb-2">
+                                <span class="details-produt-item me-2">Código:</span>
+                                <span class="details-produt-value">BCA2365</span>
+                            </div>
+                             <!--Disponibilidade-->
+                             <div class="mt-2 mb-2">
+                                <span class="details-produt-item me-2">Disponibilidade:</span>
+                                <span class="details-produt-value text-success">10 unidades</span> <!--ou--> <!--<span class="details-produt-value text-success">Fora de Estoque</span>-->
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-2 me-2">
+                                        <span class="details-produt-item me-4">Quantidade:</span>
+                                        <!--Input Ascrescer e Diminuir-->
+                                        <div class="input-group input-indec input-indec1 w-30 w-sm-60 mt-3">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="minus btn btn-white btn-number">
+                                                    <i class="fa fa-minus text-muted"></i>
+                                                </button>
+                                            </span>
+                                            
+                                            <input type="text" name="quantity" class="form-control text-center qty no-border" value="1">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="quantity-right-plus btn btn-white btn-number add">
+                                                    <i class="fa fa-plus text-muted"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div><!--col-->
+                            </div><!--row-->
+
+                            
+
+                        </div><!-- Fim dos detalhes do produto -->
+
+                    </div><!--row-->
+
+                </div><!--card-body-->
+                    <!-- Card Footer - Botões de Comprar-->
+                    <div class="card-footer text-end">
+                        <a href="" class="btn btn-success w-sm-100 mb-sm-10"><i class="fa fa-credit-card me-2"></i> Comprar Agora</a>
+                        <a href="" class="btn btn-primary  w-sm-100"><i class="fa fa-shopping-cart me-2"></i> Adcionar ao Carrinho</a>
+                    </div><!--Card-footer-->
+            </div><!--card-->
+        </div><!--col-xl-12-->
+    </div><!--row-->
+
+<!--Sub Titulo da Pagina-->
+<div class="page-header">
+    <h2 class="page-sub-title mb-0">Produtos Relacionados</h2>
+</div>
+
+<div class="row">
+
+    <!--produto-->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="#link-do-produto"><!--Link do produto também na imagem-->
+                <img src="imgs/cadeira_pool_pretal.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Movéis</span>
+                            <!-- Nome do Produto-->
+                            <a href="#link-do-produto" class="product-name">Cadeira Pool Preta</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">de R$ 999,99</span>
+                                <span class="new-price"><small>R$</small> 529,99</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                   <div class="mt-1 mb-2">
+                    <span class="">Disponibilidade:</span>
+                    <span class="text-success">18 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                    </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="#" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+
+   <!--produto-->
+       <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="#link-do-produto"><!--Link do produto também na imagem-->
+                <img src="imgs/Mesa_de_Centro_Campos_Natural.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Decoração</span>
+                            <!-- Nome do Produto-->
+                            <a href="#link-do-produto" class="product-name">Mesa de Centro Campos</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">R$ 899,00</span>
+                                <span class="new-price"><small>R$</small> 539,99</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                    <div class="mt-1 mb-2">
+                        <span class="">Disponibilidade:</span>
+                        <span class="text-danger">Fora de Estoque</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                        </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="#" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+
+<!--produto-->
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+    <div class="ibox">
+        <div class="ibox-content product-box b-radius-px11">
+            <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+            <a href="#link-do-produto"><!--Link do produto também na imagem-->
+            <img src="imgs/Mesa_de_Centro_Unique.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+            </a>
+            <!--Texto do Produto-->
+            <div class="product-desc">
+                <div class="row">
+                    <div class="col-9">
+                        <!--Categoria do Produto-->
+                        <span class="text-muted categoria-produto">Moveis</span>
+                        <!-- Nome do Produto-->
+                        <a href="#link-do-produto" class="product-name">Mesa de Centro Unique</a>
+                    </div><!--col-9-->
+                    <div class="col-3 p-0">
+                        <div class="card-new-price">
+                            <!-- Novos Preços-->
+                            <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                            <span class="new-price-discount">de R$ 449,90</span>
+                            <span class="new-price"><small>R$</small> 299,99</span>
+                        </div>
+                    </div><!--col-3-->
+                </div><!--row-->
+
+                <!--Disponibilidade-->
+               <div class="mt-1 mb-2">
+                <span class="">Disponibilidade:</span>
+                <span class="text-success">85 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                </div>
+                
+                <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                <div class="product-desc-text">
+                    Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                </div>
+                <!--Botões de Carrinho e Checkout-->
+                <div class="row mt-3">
+                    <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                    <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                    </div>
+                    <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                    <a href="#" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!--produto-->
+
+    <!--produto-->
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+        <div class="ibox">
+            <div class="ibox-content product-box b-radius-px11">
+                <!-- Imagem do Produto - Tentar deixar a imagem que é adcionada no banco de dados na proporção de 720x500px-->
+                <a href="#link-do-produto"><!--Link do produto também na imagem-->
+                <img src="imgs/Abajur_de_led.jpg" class="w-100 img-fluid top-b-radius-px11"/>
+                </a>
+                <!--Texto do Produto-->
+                <div class="product-desc">
+                    <div class="row">
+                        <div class="col-9">
+                            <!--Categoria do Produto-->
+                            <span class="text-muted categoria-produto">Iluminação</span>
+                            <!-- Nome do Produto-->
+                            <a href="#link-do-produto" class="product-name">Abajur de LED</a>
+                        </div><!--col-9-->
+                        <div class="col-3 p-0">
+                            <div class="card-new-price">
+                                <!-- Novos Preços-->
+                                <!-- Quando não houver desconto, baixa deixar esse span abaixo vazio-->
+                                <span class="new-price-discount">de R$ 79,99</span>
+                                <span class="new-price"><small>R$</small> 29,99</span>
+                            </div>
+                        </div><!--col-3-->
+                    </div><!--row-->
+
+                    <!--Disponibilidade-->
+                   <div class="mt-1 mb-2">
+                    <span class="">Disponibilidade:</span>
+                    <span class="text-success">25 unidades</span> <!--ou--> <!--<span class="details-produt-value text-danger">Fora de Estoque</span>-->
+                    </div>
+                    
+                    <!--Descrição do Produto - Detalhe -> Aqui coloquei um script pra limitar a quantidade de carateres -->
+                    <div class="product-desc-text">
+                        Aqui aparece a descrição sobre esse produto em pelo menos até duas linhas de texto.
+                    </div>
+                    <!--Botões de Carrinho e Checkout-->
+                    <div class="row mt-3">
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2 mb-2">
+                        <a href="#" class="btn btn-primary w-100 pr-1 pl-1"><i class="fa fa-shopping-cart"></i> Adcionar ao carrinho</a>
+                        </div>
+                        <div class="col-xl-6 col-sm-12 pr-2 pl-2">
+                        <a href="#" class="btn btn-outline btn-primary w-100 pr-1 pl-1"><i class="fa fa-eye"></i> Visualizar Produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--produto-->
+    
+</div><!--row produtos-->
+
+<div class="row" id="espec-completa">
+     <!-- Tabs de Especificação, dimensão e Info-->
+     <div class="col-xl-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <!--tabs-->
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <!-- tabs list-->
+                        <li><a class="nav-link active" data-toggle="tab" href="#tab-1"> Especificações</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab-2">Dimensões</a></li>
+                        <li><a class="nav-link" data-toggle="tab" href="#tab-3">Informações Adcionais</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!--tab painel Especificações-->
+                        <div role="tabpanel" id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <h4 class="mb-3 mt-3">Especificações deste produto</h4>
+                                <!--tabela-->
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="font-bold">Marca</td>
+                                                <td>Marca do Produto aqui</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">Modelo</td>
+                                                <td>Modelo do Produto aqui</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">Cor</td>
+                                                <td>Cor do Produto aqui</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">material</td>
+                                                <td>Material que o produto é produzido</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">Peso</td>
+                                                <td>Pesdo do produto</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- Fim tabela | table-responsive-->
+                            </div>
+                        </div>
+                        <!--tab painel Dimensões-->
+                        <div role="tabpanel" id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+                                <h4 class="mb-3 mt-3">Dimensões deste produto</h4>
+                                 <!--tabela-->
+                                 <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td class="font-bold">Altura</td>
+                                                <td>Altura do Produto aqui</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">Largura</td>
+                                                <td>Largura do Produto aqui</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">Profundidade</td>
+                                                <td>Profundidade do Produto aqui</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">Outra dimensão aqui</td>
+                                                <td>Aqui pode ter outra info que seja necessaria nessa especificação</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="font-bold">Outra info</td>
+                                                <td>Outra info que para manter as tabelas do mesmo tamanho</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!-- Fim tabela | table-responsive--> 
+                            </div>
+                        </div>
+                        <!--tab painel Dimensões-->
+                        <div role="tabpanel" id="tab-3" class="tab-pane">
+                            <div class="panel-body">
+                                <h4 class="mb-3 mt-3">Informações Adcionais</h4>
+                                <!--lista-->
+                                <ul class="pb-3 ul-no-list">
+                                    <li><i class="fa fa-check me-3 text-success mb-3 mr-2"></i>Produto não perecivel</li>
+                                    <li><i class="fa fa-check me-3 text-success mb-3 mr-2"></i>Produto que pode entrar em contato com água</li>
+                                    <li><i class="fa fa-check me-3 text-success mb-3 mr-2"></i>Pintura com acabamento duradoura</li>
+                                    <li><i class="fa fa-check me-3 text-success mb-3 mr-2"></i>Informação adcional 4</li>
+                                    <li><i class="fa fa-check me-3 text-success mb-3 mr-2"></i>Informação adcional 5</li>
+                                    <li><i class="fa fa-check me-3 text-success mr-2"></i>Informação adcional 6</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div><!--Fim tab-content-->
+        
+                </div><!-- fim tabs-->
+
+            </div><!--card-body-->
+
+        </div><!--card-->
+
+    </div><!--col xl-12 | Fim Tabs de Especificação, dimensão e Info-->
+
+</div><!--row-->
+
+</div><!--wraper-->
+
+
+
+
+            <!-- Footer -->
+            <div class="footer">
+    <div class="float-right">
+       Sistema de Vendas
+    </div>
+    <div>
+        <strong>Copyright</strong> CCPSytem &copy; 2000 - 2020
+    </div>
+</div>
+
+
+        </div>
+        <!-- End page wrapper-->
+
+    </div>
+    <!-- End wrapper-->
+
+
+<!-- Main Scripts -->
+<script src="../lib/jquery/dist/jquery.min.js"></script>
+<script src="../lib/Popper/popper.min.js"></script>
+<script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../lib/metisMenu/dist/jquery.metisMenu.js"></script>
+<script src="../lib/pace/pace.min.js"></script>
+<script src="../lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/site.js"></script>    
+
+<!-- Others Scripts -->
+<script src="../lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="../https://cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script src="../js/ej.culture.pt-BR.min.js"></script>
+
+<!-- Others Scripts -->
+<script src="../lib/slick-carousel/slick/slick.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+
+            $('.product-images').slick({
+                dots: true
+            });
+
+        });
+
+</script>
+
+<!-- Scritp Acionar e Remover ao carrinho-->
+<script>
+$('.add').on('click', function () {
+var $qty = $(this).closest('div').find('.qty');
+var currentVal = parseInt($qty.val());
+if (!isNaN(currentVal)) {
+$qty.val(currentVal + 1);
+}
+});
+$('.minus').on('click', function () {
+var $qty = $(this).closest('div').find('.qty');
+var currentVal = parseInt($qty.val());
+if (!isNaN(currentVal) && currentVal > 0) {
+$qty.val(currentVal - 1);
+}
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1014 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Principal | Venduus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#513693">
+
+    <!-- Add local styles, mostly for plugins css file -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Plugin input data-->
+    <link rel="stylesheet" href="css/plugins/datapicker/datepicker3.css">
+
+    <!-- Favicon | Icon Site -->
+    <link rel="icon" href="Images/icon/favicon_venduus-32x32.png" sizes="32x32" />
+    <link rel="icon" href="Images/icon/favicon_venduus-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="Images/icon/favicon_venduus-32x32.png" />
+
+</head>
+<body>
+
+
+<!-- Wrapper-->
+<div id="wrapper" class="Index">
+
+<!-- Navigation -->    
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a href="index.html">
+                        <img alt="image" width="130" height="70" src="Images/venduus-vertical-branco-so-fonte.png" />
+                    </a>
+                    
+                </div>
+                <div class="logo-element">
+                  <img alt="image" width="45" height="25" src="Images/venduus-vertical-branco-so-fonte.png" />
+              </div>
+            </li>
+
+                <li class="active">
+                    <a href="#"><i class="fa fa-bar-chart"></i> <span class="nav-label" data-i18n="nav.graphs">Dashboard</span><span class="fa arrow"></span></a>
+
+                    <ul class="nav nav-second-level collapse in">
+                        <li class="active"><a href="index.html">Principal</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-users"></i><span class="nav-label" data-i18n="nav.graphs">Clientes</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                      <li class="active"><a href="Clientes/Clientes.html">Lista de Clientes</a></li>
+                        <li class="active"><a href="Clientes/Cadastro.html">Cadastro</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-money"></i><span class="nav-label" data-i18n="nav.graphs">Cobrança</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="Cobranca/Cobranca.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-file-text"></i><span class="nav-label" data-i18n="nav.graphs">Notas Fiscais</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="NotasFiscais/NotasFiscais.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-pencil-square-o"></i><span class="nav-label" data-i18n="nav.graphs">Orçamentos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="Orcamento/Orcamentos.html">Entrada</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-list-alt"></i><span class="nav-label" data-i18n="nav.graphs">Pedidos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="Pedidos/Pedidos.html">Consulta</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#"><i class="fa fa-tags"></i><span class="nav-label" data-i18n="nav.graphs">Produtos</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class=""><a href="Produtos/Catalogo_Grid.html">Catálogo Virtual</a></li>
+                        <li class=""><a href="Produtos/Catalogo_Galeria.html">Catálogo Galeria</a></li>
+
+                    </ul>
+                
+                <li class="">
+                    <a href="#"><i class="fa fa-briefcase"></i><span class="nav-label" data-i18n="nav.graphs">Representante</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse ">
+                        <li class="active"><a href="Representantes/Representantes.html">Consulta</a></li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+</nav>
+<!-- Fim do Navigation -->   
+
+<!-- Page wraper -->
+<div id="page-wrapper" class="gray-bg">
+
+<!-- Bloco de Acesso do Usuario -->           
+<div class="row border-bottom">
+    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <!-- Frase de Apresentação do Usuario -->
+            <li>
+                <span class="welcome">Olá! Esse é seu painel, <a href="" class="user-name">Laura</a></span>
+            </li>
+            <!-- Dropdown de Orçamento -->
+            <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                    <i class="fa fa-shopping-cart"></i><span id="qdtCarrinho" class="label label-warning">0</span>
+                </a>
+                <!-- Dropdown Vazio -->
+                <ul class="dropdown-menu dropdown-messages orcamento-drop">
+                    <li>
+                            <div class="dropdown-messages-box">
+                                <div class="media-body">
+                                    <h4 class="font-bold"> Nenhum Orçamento iniciado!</h4>
+                                    <div class="dropdown-divider"></div>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+
+                <!-- Esse é um Dropdown com um orçamento dentro do carrinho -->
+                <!-- Para visualuzar, retire esse parte de dentro do comentário -->
+
+                <!--
+                <ul class="dropdown-menu dropdown-messages orcamento-drop show">
+                  <li>
+                          <div class="dropdown-messages-box">
+                              <div class="media-body">
+                                <h4 class="font-bold"> ALUA PRESENTES E ADORNOS LTDA</h4>
+                                <div class="dropdown-divider"></div>
+                              </div>
+                          </div>
+                          <div class="dropdown-messages-box d-flex">
+                              <a rel="nofollow" href="/Orcamentos/Carrinho/21949" class="btn btn-sm btn-primary pt-1">
+                                  <i class="fa fa-check-circle-o"></i> Checkout
+                              </a>
+                              <div class="card-options mr-0">
+                              <h3 class="total_valor_drop_check">
+                              Total: <span id="totalCarrinho2">R$ 106,31</span>
+                            </h3>
+                          </div>
+                          </div>
+                  </li>
+              </ul>-->
+
+            </li>
+            <!-- User Profile -->
+            <li>
+                <div class="dropdown main-profile-menu">
+                    <a data-toggle="dropdown" class="" href="">
+                        <span class="main-img-user">
+                            <!--Foto do usuario -->
+                            <img alt="avatar" src="Images/user/perfil_foto.jpg"></span>
+                        </a>
+                        <ul class="dropdown-menu user-drop animated fadeInRight m-t-xs">
+                          <div class="drop-heading">
+                            <div class="text-center">
+                                <!-- Nome do usuario-->
+                              <h5 class="dropdown-name">Laura Sobrenome</h5>
+                            </div>
+                          </div>
+                          <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle-o"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o"></i> Editar Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog"></i> Configurações</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i> Suporte</a></li>
+                            <li><a class="dropdown-item" href="/Login/LogOut"><i class="fa fa-sign-out"></i> Logout</a></li>
+                        </ul>
+                </div>
+            </li>
+             <!-- Fim User Profile -->
+        </ul>
+    </nav>        
+</div>
+<!-- Fim do Bloco de Acesso do Usuario -->
+
+<!-- Banner -->
+<div class="row  border-bottom white-bg">
+    
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Images/slides/img_slide_01.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/slides/img_slide_02.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/slides/img_slide_03.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div><!-- Fim Banner -->
+
+<!-- Main view  -->
+<div class="wrapper wrapper-content">
+
+<!--Titulo da Pagina-->
+<div class="page-header">
+  <h1 class="page-title mb-0 mb-sm-3">Dashboard Principal</h1>
+  <!-- Incluso caso tenha botão do lado direito do titulo da página-->
+  <div class="d-flex">
+      <div class="justify-content-center">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="" id="data_1">
+              <label>Data Inicial</label>
+              <div class="input-group date">
+                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="05/05/2022">
+              </div>
+          </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="" id="data_2">
+              <label>Data Final</label>
+              <div class="input-group date">
+                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="05/05/2022">
+              </div>
+          </div>
+          </div>
+
+        </div><!--row-->
+      </div><!--justify-->
+  </div><!--d-flex-->
+</div>
+
+<!-- Cards de Faturamento -->
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xl-4">
+                <div class="card overflow-hidden custom-card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="">
+                                <h3 class="faturamento">Faturamento Diário</h3>
+                                <h2 class="mb-0 number-font">R$ 0,00</h2>
+                            </div>
+                            <div class="ms-auto pr-2">
+                              <!--grafico lateral-->
+                              <span class="bar">5,3,9,6,5,9,7,3,5,2,8,5</span>
+                            </div>
+                        </div>
+                        <span class="text-muted fs-12">
+                            <span class="text-secondary">
+                                <i class="fa fa-arrow-circle-o-up text-secondary"></i> 5% </span> ná útima semana
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xl-4">
+                <div class="card overflow-hidden custom-card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="">
+                                <h3 class="faturamento">Faturamento Mensal</h3>
+                                <h2 class="mb-0 number-font">R$ 0,00</h2>
+                            </div>
+                            <div class="ms-auto pr-2">
+                               <!--grafico lateral-->
+                              <span class="line">5,3,9,6,5,9,7,3,5,2,8,4,2,3</span>
+                            </div>
+                        </div>
+                        <span class="text-muted fs-12">
+                            <span class="text-pink">
+                                <i class="fa fa-arrow-circle-o-down text-pink"></i> 0.75% </span> nos útimos 6 dias
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xl-4">
+                <div class="card overflow-hidden custom-card">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="">
+                                <h3 class="faturamento">Faturamento Anual</h3>
+                                <h2 class="mb-0 number-font">R$ 0,00</h2>
+                            </div>
+                            <div class="ms-auto pr-2">
+                                <!--grafico lateral-->
+                              <span class="bar_anual">4,1,2,8,9,2,4,8,3,7,5,8</span>
+                            </div>
+                        </div>
+                        <span class="text-muted fs-12">
+                            <span class="text-green">
+                                <i class="fa fa-arrow-circle-o-up text-green"></i> 0.9% </span> na útima semana
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+         </div><!-- Row -->
+
+         <!-- Fim dos Cards de Faturamento -->
+
+         <!-- Cards de Pedidos -->
+         <div class="row">
+
+            <!-- Pedidos Diarios -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        <h4 class="card-title up-font">Pedidos Diários</h4>
+                    </div><!--card-header-->
+                    <div class="card-body">
+                        
+                        <table class="table m-b-0 transcations mt-2">
+                            <tbody>
+                                <!--Pronta Entrega-->
+                                <tr>
+                                    <td class="no-border">
+                                        <div class="d-flex align-middle ms-3">
+                                            <div class="d-inline-block">
+                                                <h3 class="mb-1 pedidos-info">Pronta Entrega</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-end no-border">
+                                        <div class="d-inline-block">
+                                            <h3 class="mb-2 pedidos-valor">R$ 0,00
+                                                <span class="text-green small"><i class="fa fa-level-up ms-2 m-l-10 text-green"></i> 15%</span>
+                                            </h3>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <!--Entrega Futura-->
+                                <tr>
+                                    <td class="no-border">
+                                        <div class="d-flex align-middle ms-3">
+                                            <div class="d-inline-block">
+                                                <h3 class="mb-1 pedidos-info">Entrega Futura</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-end no-border">
+                                        <div class="d-inline-block">
+                                            <h3 class="mb-2 pedidos-valor">R$ 0,00
+                                                <span class="text-orange small"><i class="fa fa-level-down ms-2 m-l-10 text-orange"></i> 02%</span>
+                                            </h3>
+                                        </div> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div><!--card-body-->
+                </div><!--card-->
+                    
+            </div><!--col-->
+
+            <!-- Pedidos Mensais -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        <h4 class="card-title up-font">Pedidos Mensais</h4>
+                    </div><!--card-header-->
+                    <div class="card-body">
+                        
+                        <table class="table m-b-0 transcations mt-2">
+                            <tbody>
+                                <!--Pronta Entrega-->
+                                <tr>
+                                    <td class="no-border">
+                                        <div class="d-flex align-middle ms-3">
+                                            <div class="d-inline-block">
+                                                <h3 class="mb-1 pedidos-info">Pronta Entrega</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-end no-border">
+                                        <div class="d-inline-block">
+                                            <h3 class="mb-2 pedidos-valor">R$ 0,00
+                                                <span class="text-green small"><i class="fa fa-level-up ms-2 m-l-10 text-green"></i> 15%</span>
+                                            </h3>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <!--Entrega Futura-->
+                                <tr>
+                                    <td class="no-border">
+                                        <div class="d-flex align-middle ms-3">
+                                            <div class="d-inline-block">
+                                                <h3 class="mb-1 pedidos-info">Entrega Futura</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-end no-border">
+                                        <div class="d-inline-block">
+                                            <h3 class="mb-2 pedidos-valor">R$ 0,00
+                                                <span class="text-orange small"><i class="fa fa-level-down ms-2 m-l-10 text-orange"></i> 02%</span>
+                                            </h3>
+                                        </div> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div><!--card-body-->
+                </div><!--card-->
+                    
+            </div><!--col-->
+
+            <!-- Pedidos Anuais -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        <h4 class="card-title up-font">Pedidos Anuais</h4>
+                    </div><!--card-header-->
+                    <div class="card-body">
+                        
+                        <table class="table m-b-0 transcations mt-2">
+                            <tbody>
+                                <!--Pronta Entrega-->
+                                <tr>
+                                    <td class="no-border">
+                                        <div class="d-flex align-middle ms-3">
+                                            <div class="d-inline-block">
+                                                <h3 class="mb-1 pedidos-info">Pronta Entrega</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-end no-border">
+                                        <div class="d-inline-block">
+                                            <h3 class="mb-2 pedidos-valor">R$ 0,00
+                                                <span class="text-green small"><i class="fa fa-level-up ms-2 m-l-10 text-green"></i> 15%</span>
+                                            </h3>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <!--Entrega Futura-->
+                                <tr>
+                                    <td class="no-border">
+                                        <div class="d-flex align-middle ms-3">
+                                            <div class="d-inline-block">
+                                                <h3 class="mb-1 pedidos-info">Entrega Futura</h3>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-end no-border">
+                                        <div class="d-inline-block">
+                                            <h3 class="mb-2 pedidos-valor">R$ 0,00
+                                                <span class="text-orange small"><i class="fa fa-level-down ms-2 m-l-10 text-orange"></i> 02%</span>
+                                            </h3>
+                                        </div> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div><!--card-body-->
+                </div><!--card-->
+                    
+            </div><!--col-->
+
+             <!-- Pedidos Recentes -->
+             <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        <h4 class="card-title up-font">Pedidos Recentes</h4>
+                    </div><!--card-header-->
+                    <div class="card-body">
+                        
+                        <table class="table m-b-0 transcations mt-0 mb-08">
+                            <tbody>
+                                <!--Pedidos Entregues-->
+                                <tr>
+                                    <td class="no-border">
+                                       
+                                        <div class="avatar avatar-md bg-secondary-transparent text-secondary bradius">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                    </td>
+                                    <td class="no-border">
+                                        <div class="d-flex align-middle ms-3"> <div class="d-inline-block">
+                                            <h3 class="mb-0">Pedidos Entregues</h3>
+                                            <p class="mb-0 text-muted"><span class="text-green">3,5%</span> de aumento</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end no-border">
+                                    <div class="d-inline-block">
+                                        <h3 class="mb-2">1.704</h3>
+                                    </div>
+                                </td>
+                            </tr>
+
+                             <!--Pedidos Cancelados-->
+                             <tr>
+                                <td class="no-border">
+                                   
+                                    <div class="avatar avatar-md bg-pink-transparent text-pink bradius">
+                                        <i class="fa fa-times"></i>
+                                    </div>
+                                </td>
+                                <td class="no-border">
+                                    <div class="d-flex align-middle ms-3"> <div class="d-inline-block">
+                                        <h3 class="mb-0">Pedidos Cancelados</h3>
+                                        <p class="mb-0 text-muted"><span class="text-green">0,1%</span> de aumento</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-end no-border">
+                                <div class="d-inline-block">
+                                    <h3 class="mb-2">185</h3>
+                                </div>
+                            </td>
+                        </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div><!--card-body-->
+                </div><!--card-->
+                    
+            </div><!--col-->
+
+            
+         </div><!--row-->
+         <!-- Fim dos Cards de Pedidos -->
+
+<!--Graficos-->
+<div class="row">
+  <div class="col-12 col-sm-12">
+    <div class="card custom-card">
+      <div class="card-header">
+        <h4 class="card-title up-font">Métricas de Vendas</h4>
+        <div class="ibox-tools content-mobile">
+          <div class="btn-group">
+              <button type="button" class="btn btn-xs btn-white graph-dash-links" onclick="openGraph(event, 'semanal')" id="defaultOpen">Semanal</button>
+              <button type="button" class="btn btn-xs btn-white graph-dash-links" onclick="openGraph(event, 'mensal')">Mensal</button>
+              <button type="button" class="btn btn-xs btn-white graph-dash-links" onclick="openGraph(event, 'anual')">Anual</button>
+              
+          </div>
+      </div>
+
+      </div><!--card-header-->
+      <div class="card-body">
+
+        <!-- Grafico Semanal-->
+        <div class="flot-chart venduus-graph-dashboard" id="semanal">
+          <div class="flot-chart-content" id="flot-bar-chart"></div>
+        </div>
+
+        <!-- Grafico Mensal-->
+        <div class="venduus-graph-dashboard" id="mensal">
+          <canvas id="lineChart" height="100"></canvas>
+        </div>
+
+        <!-- Grafico Anual-->
+        <div class="venduus-graph-dashboard" id="anual">
+          <canvas id="barChart" height="100"></canvas>
+        </div>
+
+      </div><!--card-body-->
+
+    </div><!--card-->
+
+  </div><!--col-12-->
+
+</div><!--row-->
+
+<!-- Script que troca os Graficos - Semanal | Mensal | Anual-->
+<script>
+  function openGraph(evt, graphName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("venduus-graph-dashboard");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("graph-dash-links");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(graphName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+
+
+<!--Fim dos Graficos-->
+   
+    
+    <div class="row">
+
+        <!--Os mais vendidos-->
+
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xl-6">
+          <div class="card custom-card">
+            <div class="card-header d-flex">
+              <h4 class="card-title up-font">Os mais vendidos</h4>
+              <div class="card-options">
+                <a href="" class="btn btn-sm btn-primary">Ver todos</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-hover card-table table-vcenter text-nowrap">
+                   <!-- Titulos Tabela--> 
+                  <thead class="border-bottom-0 pt-3 pb-3">
+                    <tr>
+                      <th class="text-center">No</th>
+                      <th>Nome do Produto</th>
+                      <th>Categoria</th>
+                      <th>Preço</th>
+                      <th>Info da venda</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <!-- Linha 1 -->
+                    <tr>
+                      <td class="text-center td-top-produtos">1</td>
+                      <td>
+                        <img class="avatat avatar-md brround me-2" src="Images/produtos/produto_top_1.jpg" alt="img" /> Nome do Produto 1
+                      </td>
+                      <td class="fs-13 td-top-produtos">
+                        <span class="me-2 w-2 h-2"></span><a class="" href="">Decoração</a>
+                      </td>
+                      <td class="td-top-produtos">
+                          <span class="">R$ 0,00</span>
+                        </td>
+                      <td class="text-muted td-top-produtos">Há 3 dias atrás</td>
+                      <td class="td-top-produtos">
+                        <span class="badge fs-11 bg-success-transparent text-success ms-2">Em estoque</span>
+                      </td>
+                    </tr>
+                    <!-- Linha 2 -->
+                    <tr>
+                      <td class="text-center td-top-produtos">2</td>
+                      <td>
+                        <img class="avatat avatar-md brround me-2" src="Images/produtos/produto_top_2.jpg" alt="img" /> Nome do Produto 2
+                      </td>
+                      <td class="fs-13 td-top-produtos">
+                        <span class="me-2 w-2 h-2"></span><a class="" href="">Calçados</a>
+                      </td>
+                      <td class="td-top-produtos">
+                          <span class="">R$ 0,00</span>
+                        </td>
+                      <td class="text-muted td-top-produtos">Há 2 dias atrás</td>
+                      <td class="td-top-produtos">
+                        <span class="badge fs-11 bg-secondary-transparent text-secondary ms-2">Melhor venda</span>
+                      </td>
+                    </tr>
+                      <!-- Linha 3 -->
+                    <tr>
+                      <td class="text-center td-top-produtos">3</td>
+                      <td>
+                        <img class="avatat avatar-md brround me-2" src="Images/produtos/produto_top_3.jpg" alt="img" /> Nome do Produto 3
+                      </td>
+                      <td class="fs-13 td-top-produtos">
+                        <span class="me-2 w-2 h-2"></span><a class="" href="">Acessórios</a>
+                      </td>
+                      <td class="td-top-produtos">
+                          <span class="">R$ 0,00</span>
+                        </td>
+                      <td class="text-muted td-top-produtos">Há 5 dias atrás</td>
+                      <td class="td-top-produtos">
+                        <span class="badge fs-11 bg-danger-transparent text-danger ms-2">Fora de estoque</span>
+                      </td>
+                    </tr>
+                      <!-- Linha 4 -->
+                    <tr>
+                      <td class="text-center td-top-produtos">4</td>
+                      <td>
+                        <img class="avatat avatar-md brround me-2" src="Images/produtos/produto_top_4.jpg" alt="img" /> Nome do Produto 4
+                      </td>
+                      <td class="fs-13 td-top-produtos">
+                        <span class="me-2 w-2 h-2"></span><a class="" href="">Eletrônicos</a>
+                      </td>
+                      <td class="td-top-produtos">
+                          <span class="">R$ 0,00</span>
+                        </td>
+                      <td class="td-top-produtos text-muted">Hoje</td>
+                      <td class="td-top-produtos">
+                        <span class="badge fs-11 bg-success-transparent text-success text-success ms-2">Em estoque</span>
+                      </td>
+                      <!-- Linha 5 -->
+                    </tr>
+                    <tr>
+                      <td class="text-center td-top-produtos">5</td>
+                      <td>
+                        <img class="avatat avatar-md brround me-2" src="Images/produtos/produto_top_5.jpg" alt="img" /> Nome do Produto 5
+                      </td>
+                      <td class="fs-13 td-top-produtos">
+                        <span class="dot-label bg-info me-2 w-2 h-2"></span><a class="" href="">Informática</a>
+                      </td>
+                      <td class="td-top-produtos">
+                          <span class="">R$ 0,00</span>
+                        </td>
+                      <td class="text-muted td-top-produtos">5 dias atrás</td>
+                      <td class="td-top-produtos">
+                        <span class="badge fs-11 bg-info-transparent text-info ms-2 mb-0">Mais Buscado</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fim dos mais vendidos-->
+
+        <!--Últimas transações-->
+        <div class="col-md-12 col-sm-12 col-lg-6 col-xl-3">
+          <div class="card custom-card">
+            <div class="card-header d-flex">
+              <h4 class="card-title up-font">Últimas transações</h4>
+              <div class="card-options">
+                <a href="" class="btn btn-sm btn-primary">Ver Todos</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="d-flex">
+                  <div class="ultimas-trans-img brround bg-primary text-white">AL</div>
+                  <div class="">
+                    <a href="" class="mb-1 fs-13">Alberto</a>
+                    <p class="text-muted fs-11">2 horas atrás</p>
+                  </div>
+                  <span class="text-success fs-12 ms-auto">+R$ 248,95</span>
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex">
+                    <div class="ultimas-trans-img brround bg-danger text-white">HE</div>
+                  <div class="">
+                    <a href="javascript:void(0);" class="mb-1 fs-13">Herrouchi</a>
+                    <p class="text-muted fs-11">6 horas atrás</p>
+                  </div>
+                  <span class="text-success fs-12 ms-auto">+R$ 155,88</span>
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex">
+                  <div
+                    class="Recent-transactions-img brround bg-warning text-white">AK</div>
+                  <div class="">
+                    <a href="javascript:void(0);" class="mb-1 fs-13">Alexandra Kiso</a>
+                    <p class="text-muted fs-11">12 horas atrás</p>
+                  </div>
+                  <span class="text-danger fs-12 ms-auto">-R$ 25,00</span
+                  >
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex">
+                  <div
+                    class="Recent-transactions-img brround bg-teal text-white">KW</div>
+                  <div class="">
+                    <a href="javascript:void(0);"class="font-weight-normal1 mb-1 fs-13">kate william</a>
+                    <p class="text-muted fs-11">1 dia atrás</p>
+                  </div>
+                  <span class="text-success fs-12 ms-auto"
+                    >+$153.45</span
+                  >
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex">
+                  <div
+                    class="Recent-transactions-img brround bg-success text-white">JP
+                  </div>
+                  <div class="">
+                    <a href="javascript:void(0);" class="mb-1 fs-13">Jean Powell</a>
+                    <p class="text-muted fs-11">2 dias atrás</p>
+                  </div>
+                  <span class="text-success fs-12 ms-auto">+R$ 4.380,90</span>
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex">
+                  <div
+                    class="Recent-transactions-img brround bg-secondary text-white">HC</div>
+                  <div class="">
+                    <a href="javascript:void(0);" class="mb-1 fs-13">Hakino Chen</a>
+                    <p class="text-muted fs-11">21 hours ago</p>
+                  </div>
+                  <span class="text-success font-weight-normal fs-12 ms-auto">+R$ 758,35</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Canais de compra ou venda?-->
+        <div class="col-md-12 col-sm-12 col-lg-6 col-xl-3">
+          <div class="card custom-card">
+            <div class="card-header d-flex">
+              <h4 class="card-title up-font">Canais Compra</h4>
+              <div class="card-options">
+                <a href="" class="btn btn-sm btn-primary">Ver Todos</a>
+              </div>
+            </div>
+            <div class="card-body">
+
+                <div class="d-flex">
+                  <div class="ultimas-trans-img brround bg-success text-white">NL</div>
+                  <div class="">
+                    <a href="" class="mb-1 fs-13">Nome da Loja</a>
+                    <p class="text-muted fs-11">Nome do Vendedor</p>
+                  </div>
+                  <!--<span class="text-success fs-12 ms-auto">+R$ 248,95</span>-->
+                </div>
+
+                <div class="d-flex">
+                  <img class="avatat avatar-md brround me-2 mr-2" src="Images/canais/canais_mercado_livre_256px.png" alt="img">
+                  <div class="">
+                    <a href="" class="mb-1 fs-13">Mercado Livre</a>
+                    <p class="text-muted fs-11">Nome do Vendedor</p>
+                  </div>
+                  <!--<span class="text-success fs-12 ms-auto">+R$ 248,95</span>-->
+                </div>
+
+                <div class="d-flex">
+                  <img class="avatat avatar-md brround me-2 mr-2" src="Images/canais/canais_wish_256px.png" alt="img">
+                  <div class="">
+                    <a href="" class="mb-1 fs-13">Wish</a>
+                    <p class="text-muted fs-11">Nome do Vendedor</p>
+                  </div>
+                  <!--<span class="text-success fs-12 ms-auto">+R$ 248,95</span>-->
+                </div>
+
+                <div class="d-flex">
+                  <img class="avatat avatar-md brround me-2 mr-2" src="Images/canais/canais_dafiti_256px.png" alt="img">
+                  <div class="">
+                    <a href="" class="mb-1 fs-13">Dafiti</a>
+                    <p class="text-muted fs-11">Nome do Vendedor</p>
+                  </div>
+                  <!--<span class="text-success fs-12 ms-auto">+R$ 248,95</span>-->
+                </div>
+              
+                <div class="d-flex">
+                  <img class="avatat avatar-md brround me-2 mr-2" src="Images/canais/canais_magalu_256px.png" alt="img">
+                  <div class="">
+                    <a href="" class="mb-1 fs-13">Magazine Luiza</a>
+                    <p class="text-muted fs-11">Nome do Vendedor</p>
+                  </div>
+                  <!--<span class="text-success fs-12 ms-auto">+R$ 248,95</span>-->
+                </div>
+
+                <div class="d-flex">
+                  <img class="avatat avatar-md brround me-2 mr-2" src="Images/canais/canais_netshoes_256px.png" alt="img">
+                  <div class="">
+                    <a href="" class="mb-1 fs-13">Netshoes</a>
+                    <p class="text-muted fs-11">Nome do Vendedor</p>
+                  </div>
+                  <!--<span class="text-success fs-12 ms-auto">+R$ 248,95</span>-->
+                </div>
+              
+             
+            </div>
+          </div>
+        </div>
+
+      </div><!-- Row -->
+      
+</div><!-- End wrapper wrapper-content -->
+
+
+            <!-- Footer -->
+            <div class="footer">
+    <div class="float-right">
+       Sistema de Vendas
+    </div>
+    <div>
+        <strong>Copyright</strong> CCPSytem &copy; 2000 - 2020
+    </div>
+</div>
+
+
+</div>
+        <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
+
+    
+<!-- Main Scripts -->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/Popper/popper.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="lib/metisMenu/dist/jquery.metisMenu.js"></script>
+<script src="lib/pace/pace.min.js"></script>
+<script src="lib/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/site.js"></script>
+
+<!-- Others Scripts -->
+<script src="lib/jquery-validation-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3.7.2/js/browser/bluebird.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+<script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+<script src="js/ej.culture.pt-BR.min.js"></script>
+
+<!-- Script input de data -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="js/plugins/datapicker/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+<script>
+    var mem = 
+    
+        $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true,
+                language: "pt-BR"
+            });
+
+            $('#data_2 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true, 
+                autoclose: true,
+                language: "pt-BR"
+            });
+</script>
+
+<!-- Graphics Plugins Flot -->
+<!-- Flot -->
+<script src="js/plugins/float/jquery.flot.js"></script>
+<script src="js/plugins/float/jquery.flot.tooltip.min.js"></script>
+<script src="js/plugins/float/jquery.flot.resize.js"></script>
+<!-- Chart -->
+<script src="js/plugins/chart/Chart.min.js"></script>
+<!-- Exemplos dos Graficos Exibidos -->
+<!-- Flot -->
+<script src="js/plugins/float/flot-demo.js"></script>
+<!-- Chart -->
+<script src="js/plugins/chart/chartjs-demo.js"></script>
+<!--Graficos Demo - Faturamente Diario, mensal e anual-->
+<script src="js/plugins/peity/jquery.peity.min.js"></script>
+<script>
+ $(function() {
+    $("span.pie").peity("pie", {
+        fill: ['#1ab394', '#d7d7d7', '#ffffff']
+    })
+
+    $(".line").peity("line",{
+        fill: '#fff',
+        stroke:'#ec82ef',
+        width:100,
+        height:80
+    })
+
+    $(".bar").peity("bar", {
+        fill: ["#05c3fb", "#ccf2fd"],
+        width:100,
+        height:80
+    })
+
+    $(".bar_anual").peity("bar", {
+      fill: ["#4ecc48", "#c1f7bf"],
+        width:100,
+        height:80
+        
+    })
+
+    var updatingChart = $(".updating-chart").peity("line", { fill: '#1ab394',stroke:'#169c81', width: 64 })
+
+    setInterval(function() {
+        var random = Math.round(Math.random() * 10)
+        var values = updatingChart.text().split(",")
+        values.shift()
+        values.push(random)
+
+        updatingChart
+            .text(values.join(","))
+            .change()
+    }, 1000);
+
+});
+</script>
+
+</body>
+</html>
